@@ -1,4 +1,4 @@
-baseURL = "http://teuber.dev/"
+baseURL = "https://teuber.dev/"
 languageCode = "de-de"
 title = "Samuel Teuber"
 theme = "introduction"
