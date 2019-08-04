@@ -1,8 +1,13 @@
 language: go
 
 install:
-  - "go get github.com/gohugoio/hugo --tags=extended"
-  - "sudo apt-get install -y git"
+  - mkdir ./src
+  - cd ./src
+  - git clone https://github.com/gohugoio/hugo.git
+  - cd ./hugo
+  - go install --tags extended
+  - cd ../../
+  - sudo apt-get install -y git
 
 script:
   - .travis/build.sh
