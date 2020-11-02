@@ -7,7 +7,7 @@ theme = "introduction"
 	themeStyle                   = "light"                 # Choose "light" or "dark"
     favicon                      = "/img/fav.ico"          # Path to favicon file
     showRSSButton                = false                   # Show rss button in navigation
-    fadeIn                       = true                    # Turn on/off the fade-in effect
+    fadeIn                       = false                    # Turn on/off the fade-in effect
     fadeInIndex                  = false                   # Turn on/off the fade-in effect on the index page even if fade-in was otherwise turned off
     dateFormat                   = "2.1.2006"
     email                        = "samuel@samweb.org"   # E-mail address for contact section
@@ -40,3 +40,16 @@ theme = "introduction"
 		url = "mailto:samuel@samweb.org"  # For a direct email link, use "mailto:test@example.org".
 		icon = "paper-plane" # icon name without the 'fa-'
 		icon_pack = "fas"
+[menu]
+	[[menu.main]]
+		name    = "Home"
+		url     = "/"
+		weight  = -100
+#	[[menu.main]]
+#		name    = "Blog"
+#		url     = "/blog"
+#		weight  = -90
+	[[menu.main]]
+		name    = "Programmierparadigmen"
+		url     = "/propa"
+		weight  = -80
