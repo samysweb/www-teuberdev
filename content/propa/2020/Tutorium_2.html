@@ -1,9 +1,3 @@
----
-title: "Tutorium 2 (ohne Lösungen)"
-draft: false
-weight: 1
-headless: false
----
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
@@ -13276,7 +13270,7 @@ propa@teuber.dev<br>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Haskell"><pre><span></span><span class="nf">pow3</span> <span class="n">b</span> <span class="n">e</span>
@@ -13335,7 +13329,7 @@ propa@teuber.dev<br>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Haskell"><pre><span></span><span class="nf">root</span> <span class="n">e</span> <span class="n">r</span>
@@ -14033,7 +14027,7 @@ font-weight: bold;
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Currying">Currying<a class="anchor-link" href="#Currying">&#182;</a></h1><h2 id="In-Lambda-Notation">In Lambda Notation<a class="anchor-link" href="#In-Lambda-Notation">&#182;</a></h2><p>Aus $g(x,y) = x - \frac{y}{2}$ wird $g(x) = \lambda y . \frac{y}{2}$</p>
+<h1 id="Currying">Currying<a class="anchor-link" href="#Currying">&#182;</a></h1><h2 id="In-Lambda-Notation">In Lambda Notation<a class="anchor-link" href="#In-Lambda-Notation">&#182;</a></h2><p>Aus $g(x,y) = x - \frac{y}{2}$ wird $g(x) = \lambda y . x - \frac{y}{2}$</p>
 
 </div>
 </div>
@@ -14574,11 +14568,11 @@ font-weight: bold;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Haskell"><pre><span></span><span class="c1">-- Übung 1: Listenkonkatenation mit foldr (2min)</span>
-<span class="nf">app</span> <span class="n">xs</span> <span class="n">ys</span> <span class="ow">=</span> <span class="c1">-- ????</span>
+<span class="nf">app</span> <span class="n">xs</span> <span class="n">ys</span> <span class="ow">=</span> <span class="n">foldr</span> <span class="p">(</span><span class="kt">:</span><span class="p">)</span> <span class="n">ys</span> <span class="n">xs</span>
 <span class="nf">app</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
 </pre></div>
 
@@ -14609,12 +14603,12 @@ font-weight: bold;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Haskell"><pre><span></span><span class="c1">-- Übung 2: Listenumkehrung mit foldl (3min)</span>
 <span class="c1">-- Tipp: Nutzt cons (:) und flip :: (a -&gt; b -&gt; c) -&gt; b -&gt; a -&gt; c</span>
-<span class="nf">rev</span> <span class="ow">=</span> <span class="c1">-- ????</span>
+<span class="nf">rev</span> <span class="ow">=</span> <span class="n">foldl</span> <span class="p">(</span><span class="n">flip</span> <span class="p">(</span><span class="kt">:</span><span class="p">))</span> <span class="kt">[]</span>
 <span class="nf">rev</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
 </pre></div>
 
@@ -14645,11 +14639,11 @@ font-weight: bold;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Haskell"><pre><span></span><span class="c1">-- Übung 3: Addiere Listen Elementweise (2min)</span>
-<span class="nf">addLists</span> <span class="ow">=</span> <span class="c1">-- ????</span>
+<span class="nf">addLists</span> <span class="ow">=</span> <span class="n">zipWith</span> <span class="p">(</span><span class="o">+</span><span class="p">)</span>
 <span class="nf">addLists</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">20</span><span class="p">]</span>
 </pre></div>
 
@@ -14692,11 +14686,11 @@ Schreibt einen haskell Ausdruck, der die Menge $\{(x+1)^2 \mid x \in \{ 0 \dots 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Haskell"><pre><span></span><span class="c1">-- Übung 4 (2min)</span>
-<span class="nf">mySet</span> <span class="ow">=</span> <span class="c1">-- ????</span>
+<span class="nf">mySet</span> <span class="ow">=</span> <span class="p">[</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span> <span class="o">|</span> <span class="n">x</span> <span class="ow">&lt;-</span> <span class="p">[</span><span class="mi">0</span><span class="o">..</span><span class="mi">10</span><span class="p">],</span> <span class="n">x</span> <span class="p">`</span><span class="n">mod</span><span class="p">`</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="ow">&lt;-</span><span class="p">[</span><span class="mi">0</span><span class="o">..</span><span class="mi">5</span><span class="p">]</span> <span class="p">]</span>
 <span class="nf">mySet</span>
 </pre></div>
 
@@ -14716,7 +14710,7 @@ Schreibt einen haskell Ausdruck, der die Menge $\{(x+1)^2 \mid x \in \{ 0 \dots 
 
 
 <div class="output_text output_subarea ">
-<pre>[1,9,25,49,81,121]</pre>
+<pre>[1,1,1,1,1,1,9,9,9,9,9,9,25,25,25,25,25,25,49,49,49,49,49,49,81,81,81,81,81,81,121,121,121,121,121,121]</pre>
 </div>
 
 </div>
@@ -15070,11 +15064,12 @@ Mit Anfangswert und <code>next</code> Funktion: Erzeugung einer unendlichen List
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Haskell"><pre><span></span><span class="c1">-- Übung 5: Baut mit iterate eine unendliche Liste der Form [[0],[1,0],[2,1,0],[3,2,1,0],...] (3min)</span>
-<span class="nf">myList</span> <span class="ow">=</span> <span class="c1">-- ????</span>
+<span class="nf">myList</span> <span class="ow">=</span> <span class="n">iterate</span> <span class="n">f</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="kr">where</span> <span class="n">f</span> <span class="n">list</span><span class="o">@</span><span class="p">(</span><span class="n">x</span><span class="kt">:</span><span class="n">xs</span><span class="p">)</span> <span class="ow">=</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="kt">:</span> <span class="n">list</span>
 <span class="nf">take</span> <span class="mi">10</span> <span class="n">myList</span>
 </pre></div>
 
@@ -15120,10 +15115,10 @@ Mit Anfangswert und <code>next</code> Funktion: Erzeugung einer unendlichen List
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Haskell"><pre><span></span><span class="nf">fibs</span> <span class="ow">=</span> <span class="c1">-- ????</span>
+<div class=" highlight hl-Haskell"><pre><span></span><span class="nf">fibs</span> <span class="ow">=</span> <span class="mi">0</span><span class="kt">:</span><span class="mi">1</span><span class="kt">:</span><span class="n">zipWith</span> <span class="p">(</span><span class="o">+</span><span class="p">)</span> <span class="n">fibs</span> <span class="p">(</span><span class="n">tail</span> <span class="n">fibs</span><span class="p">)</span>
 <span class="nf">take</span> <span class="mi">15</span> <span class="n">fibs</span>
 </pre></div>
 
@@ -15188,12 +15183,12 @@ Relevante Funktionen sind:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Haskell"><pre><span></span><span class="nf">isprime</span> <span class="n">n</span>
-        <span class="o">|</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="ow">=</span> <span class="c1">-- ????</span>
-        <span class="o">|</span> <span class="n">otherwise</span> <span class="ow">=</span> <span class="c1">-- ????</span>
+        <span class="o">|</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="ow">=</span> <span class="ne">error</span> <span class="s">&quot;error&quot;</span>
+        <span class="o">|</span> <span class="n">otherwise</span> <span class="ow">=</span> <span class="n">null</span> <span class="p">(</span><span class="n">filter</span> <span class="p">(</span><span class="nf">\</span><span class="n">x</span> <span class="ow">-&gt;</span> <span class="n">n</span> <span class="p">`</span><span class="n">mod</span><span class="p">`</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">[</span><span class="mi">2</span><span class="o">..</span><span class="n">root</span> <span class="mi">2</span> <span class="n">n</span><span class="p">])</span>
 
 <span class="nf">isprime</span> <span class="mi">8</span>
 </pre></div>
@@ -15294,7 +15289,7 @@ color: red;
 .suggestion-name {
 font-weight: bold;
 }
-</style><div class="suggestion-name" style="clear:both;">Use any</div><div class="suggestion-row" style="float: left;"><div class="suggestion-warning">Found:</div><div class="highlight-code" id="haskell">null (filter (\ x -> n `mod` x == 0) [2 .. (root 2 n)])</div></div><div class="suggestion-row" style="float: left;"><div class="suggestion-warning">Why Not:</div><div class="highlight-code" id="haskell">not (any (\ x -> n `mod` x == 0) [2 .. (root 2 n)])</div></div>
+</style><div class="suggestion-name" style="clear:both;">Use any</div><div class="suggestion-row" style="float: left;"><div class="suggestion-warning">Found:</div><div class="highlight-code" id="haskell">null (filter (\ x -> n `mod` x == 0) [2 .. root 2 n])</div></div><div class="suggestion-row" style="float: left;"><div class="suggestion-warning">Why Not:</div><div class="highlight-code" id="haskell">not (any (\ x -> n `mod` x == 0) [2 .. root 2 n])</div></div>
 </div>
 
 </div>
@@ -15342,16 +15337,16 @@ Eingabe <code>input</code> an jeder Stelle i = n*k+j um <code>key !! j</code> ve
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Haskell"><pre><span></span><span class="kr">import</span> <span class="nn">Data.Char</span>
 
 <span class="nf">translate</span> <span class="ow">::</span> <span class="kt">Int</span> <span class="ow">-&gt;</span> <span class="kt">Char</span> <span class="ow">-&gt;</span> <span class="kt">Char</span>
-<span class="nf">translate</span> <span class="n">j</span> <span class="n">c</span> <span class="ow">=</span> <span class="c1">-- ????</span>
+<span class="nf">translate</span> <span class="n">j</span> <span class="n">c</span> <span class="ow">=</span> <span class="n">chr</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="p">(</span><span class="n">ord</span> <span class="n">c</span> <span class="o">-</span> <span class="n">a</span> <span class="o">+</span> <span class="n">j</span><span class="p">)</span> <span class="p">`</span><span class="n">mod</span><span class="p">`</span> <span class="mi">26</span><span class="p">)</span>
     <span class="kr">where</span> <span class="n">a</span> <span class="ow">=</span> <span class="n">ord</span> <span class="sc">&#39;A&#39;</span>
 
-<span class="nf">vigenere</span> <span class="n">key</span> <span class="n">input</span> <span class="ow">=</span> <span class="c1">-- ????</span>
+<span class="nf">vigenere</span> <span class="n">key</span> <span class="n">input</span> <span class="ow">=</span> <span class="n">zipWith</span> <span class="n">translate</span> <span class="p">(</span><span class="n">cycle</span> <span class="n">key</span><span class="p">)</span> <span class="n">input</span>
 
 <span class="nf">vigenere</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="s">&quot;ABCDEF&quot;</span>
 </pre></div>
