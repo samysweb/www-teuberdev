@@ -14,5 +14,6 @@ Hier finden sich die Unterlagen für mein Tutorium im Wintersemester 2020/21
 | Woche 4				| [hier](tutorium_4_pre)		| ---							| ---						|
 | Woche 5				| [hier](tutorium_5_pre)		| [Aufschrieb](Tutorium_5.pdf)	|							|
 | Woche 6				| [hier](tutorium_6_pre)		|								|							|
+| Woche 7				| [hier](tutorium_7_pre)		|								|							|
 
 *leider gibt es aktuell Probleme mit dem PDF Export
