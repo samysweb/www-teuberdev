@@ -14,7 +14,7 @@ organizations:
   url: https://kit.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Computer Science Student interested in formal methods per se as well as for software and machine learning verification.
+bio: Interested in theoretical computer science and formal methods per se as well as for software and machine learning verification.
 
 # Interests to show in About widget
 interests:

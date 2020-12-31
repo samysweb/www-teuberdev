@@ -1,0 +1,18 @@
+---
+title: "ProPa WS 20/21"
+weight: 0
+type: page
+---
+Hier finden sich die Unterlagen für mein Tutorium im Wintersemester 2020/21
+
+| Woche					| Ohne Lösungen					| Mit Lösungen					| PDF*						|
+|-----------------------|-------------------------------|-------------------------------|---------------------------|
+| Woche 1				| 								| [hier](Tutorium_1.html)			| [hier](Tutorium_1.pdf)	|
+| Woche 2				| [hier](Tutorium_2_pre.html)		| [hier](Tutorium_2.html)			| [hier](Tutorium_2.pdf)	|
+| Woche 3				| [hier](Tutorium_3_pre.html)		| [hier](Tutorium_3.html)			| [hier](Tutorium_3.pdf) (Exportfehler)	|
+| Woche 4				| [hier](Tutorium_4_pre.html)		| ---							| ---						|
+| Woche 5				| [hier](Tutorium_5_pre.html)		| [Aufschrieb](Tutorium_5.pdf)	|							|
+| Woche 6				| [hier](Tutorium_6_pre.html)		|								|							|
+| Woche 7				| [hier](Tutorium_7_pre.html)		|								|							|
+
+*Leider gibt es aktuell Probleme mit dem PDF Export

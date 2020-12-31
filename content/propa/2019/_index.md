@@ -1,0 +1,23 @@
+---
+title: "ProPa WS 19/20"
+weight: 0
+type: page
+---
+Hier finden sich die Unterlagen für mein Tutorium im Wintersemester 2019/20
+
+| Woche					| Unterlagen					|
+|-----------------------|-------------------------------|
+| Woche 1				| [hier](Tutorium_1.html)	|
+| Woche 2				| [hier](Tutorium_2.html)	|
+| Woche 3				| [hier](Tutorium_3.html)	|
+| Woche 4				| [hier](Tutorium_4.html)	|
+| Woche 5				| [hier](Tutorium_5.html)	|
+| Woche 6				| [hier](Tutorium_6.html)	|
+| Woche 7				| [hier](Tutorium_7.html)	|
+| Woche 8				| [hier](Tutorium_8.html)	|
+| Woche 9				| [hier](Tutorium_9.html)	|
+| Woche 10				| [hier](Tutorium_10.html)	|
+| Woche 11				| [hier](Tutorium_11.html)	|
+| Woche 12				| [hier](Tutorium_12.html)	|
+| Woche 13				| [hier](Tutorium_13.html)	|
+| Woche 14				| [hier](Tutorium_14.html)	|
