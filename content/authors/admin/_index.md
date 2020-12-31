@@ -35,6 +35,9 @@ education:
   - course: B.Sc. in Computer Science
     institution: Karlsruhe Institute of Technology
     year: 2015-2020
+  - course: A Levels (Abitur)
+    institution: Oskar-von-Miller-Gymnasium, München
+    year: 2015
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
