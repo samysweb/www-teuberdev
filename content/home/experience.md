@@ -29,7 +29,7 @@ experience:
     date_start: '2019-10-01'
     #date_end: '2020-03-31'
     description: |2-
-        During the winter semesters 2019 and 2020 I was a student assistant for the lecture on programming paradigms by Prof. Snelting at KIT.  
+        During the winter semesters 2019 and 2020 I was a student assistant for the lecture on programming paradigms by Prof. Gregor Snelting at KIT.  
         My main duties were holding a weekly exercise and correcting exercise sheets.  
         In 2020 the exercise was held entirely as an online course.
         
