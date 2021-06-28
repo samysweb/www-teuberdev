@@ -22,6 +22,13 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
+  - title: Student Assistant for Software Quantification Research
+    company: KASTEL / ITI Beckert, KIT
+    company_url: 'https://formal.iti.kit.edu'
+    location: Karlsruhe
+    date_start: '2021-04-15'
+    date_end: '2021-10-15'
+
   - title: Student Assistant for Software Safety Quantification Research
     company: ITI Beckert, KIT
     company_url: 'https://formal.iti.kit.edu'
