@@ -22,12 +22,22 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
+  - title: Student Assistant for Software Safety Quantification Research
+    company: ITI Beckert, KIT
+    company_url: 'https://formal.iti.kit.edu'
+    location: Karlsruhe
+    date_start: '2020-10-01'
+    date_end: '2020-12-31'
+    description: |2-
+      Development of [counterSharp](https://github.com/samysweb/counterSharp): A tool for the quantification of C-programs based on specification adherence.  
+      Work will be published in a paper at QEST 2021.
+
   - title: Student Assistant for "Programmierparadigmen"
     company: IPD Snelting, KIT
     company_url: 'https://pp.info.uni-karlsruhe.de/'
     location: Karlsruhe
     date_start: '2019-10-01'
-    #date_end: '2020-03-31'
+    date_end: '2021-03-31'
     description: |2-
         During the winter semesters 2019 and 2020 I was a student assistant for the lecture on programming paradigms by Prof. Gregor Snelting at KIT.  
         My main duties were holding a weekly exercise and correcting exercise sheets.  
