@@ -23,7 +23,7 @@ links:
   url: thesis.pdf
 - icon: graduation-cap
   icon_pack: fas
-  name: Paper
+  name: Publication
   url: /publication/ba/
 # url_code: ""
 # url_pdf: ""
