@@ -49,7 +49,9 @@ abstract: |2-
 # Summary. An optional shortened abstract.
 summary: We present and evaluate a pipeline allowing for the quantification of C-programs according to their specification adherence.
 
-tags: []
+tags:
+- Formal Methods
+- Quantification
 
 # Display this page in the Featured widget?
 featured: true
