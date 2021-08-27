@@ -60,8 +60,10 @@ featured: true
 links:
  - name: Experiments
    url: 'https://github.com/samysweb/counterSharp-experiments'
+ - name: DOI / Springer
+   url: https://doi.org/10.1007/978-3-030-85172-9_4
 
-#url_pdf: 'https://arxiv.org/pdf/2008.10061.pdf'
+url_pdf: '/publication/countersharp2021/qest_acknolwedged.pdf'
 url_code: 'https://github.com/samysweb/counterSharp'
 #url_dataset: 'https://github.com/samysweb/counterSharp-experiments'
 url_poster: ''
