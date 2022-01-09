@@ -24,6 +24,11 @@
   weight = 25
 
 [[main]]
+  name = "Pittsburgh"
+  url = "/category/pittsburgh/"
+  weight = 26
+
+[[main]]
   name = "Posts"
   url = "#posts"
   weight = 30
