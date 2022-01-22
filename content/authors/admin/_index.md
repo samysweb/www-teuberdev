@@ -81,4 +81,3 @@ My name is Samuel Teuber and I am a Master Student of Computer Science at KIT, K
 I have previously obtained a B.Sc. degree in Computer Science at KIT and spent a year abroad in Grenoble, France through the ERASMUS programme.
 
 I am interested in theoretical computer science with a focus on formal methods applied to software and machine learning verification.
-I am also a student assistant in a course on programming paradigms at KIT, Karlsruhe.
