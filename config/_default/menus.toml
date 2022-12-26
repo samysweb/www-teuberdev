@@ -14,24 +14,19 @@
 #  weight = 15
 
 [[main]]
-  name = "Work"
+  name = "Research"
   url = "/work"
   weight = 20
 
 [[main]]
-  name = "Programmierparadigmen"
-  url = "/propa"
+  name = "Teaching"
+  url = "/teaching"
   weight = 25
 
 [[main]]
-  name = "Pittsburgh"
-  url = "/category/pittsburgh/"
+  name = "Blog"
+  url = "/blog/"
   weight = 26
-
-[[main]]
-  name = "Posts"
-  url = "#posts"
-  weight = 30
 
 
 #[[main]]

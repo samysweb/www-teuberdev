@@ -7,10 +7,10 @@ widget: portfolio
 headless: true
 
 # Order that this section appears on the page.
-weight: 15
+weight: 30
 
-title: Projects
-subtitle: ''
+title: Study Projects
+subtitle: "Projects from Bachelor's and Master's (2015-2022)."
 
 content:
   # Page type to display. E.g. project.
@@ -25,14 +25,8 @@ content:
   # To filter by a specific tag, set `tag` to an existing tag name.
   # To remove the toolbar, delete the entire `filter_button` block.
   filter_button:
-  - name: All
-    tag: '*'
-  - name: Formal Methods
-    tag: Formal Methods
-  - name: Web Development
-    tag: Web Development
-  - name: Other
-    tag: Other
+  - name: Student Projects
+    tag: 'Student'
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.

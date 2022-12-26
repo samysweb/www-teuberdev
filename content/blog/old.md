@@ -7,14 +7,16 @@ widget: pages
 headless: true
 
 # Order that this section appears on the page.
-weight: 20
+weight: 30
 
-title: Publications
-subtitle: ''
+title: Blog Post Archive
+subtitle: 'This blog post represents a collection of blog posts I have written in various blogs and on various platforms since the year 2011.
+I now keep those blog posts here as a sort of *thought archive* and might extend them with further thoughts as I go along.
+I have put these blog posts here *as is* -- without any (sometimes badly needed) spell checks, censorship or commentary. Current opinions may (significantly) deviate from the opinions expressed here.'
 
 content:
   # Page type to display. E.g. post, talk, publication...
-  page_type: publication
+  page_type: post
   # Choose how much pages you would like to display (0 = all pages)
   count: 0
   # Choose how many pages you would like to offset by
@@ -24,7 +26,7 @@ content:
   # Filter on criteria
   filters:
     tag: ''
-    category: ''
+    category: 'Archive'
     publication_type: ''
     author: ''
     exclude_featured: false
@@ -34,7 +36,7 @@ design:
   #   2 = Compact
   #   3 = Card
   #   4 = Citation (publication only)
-  columns: '1'
+  columns: '2'
   view: 2
 ---
 

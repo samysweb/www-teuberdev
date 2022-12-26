@@ -3,6 +3,7 @@ title: Studyplan
 summary: Practical Software Engineering Project (PSE)
 tags:
 - Web Development
+- Student
 date: "2017-03-31T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).

@@ -3,6 +3,7 @@ title: Solving difficult SMT instances using abstractions and incremental SMT so
 summary: Bachelor Thesis
 tags:
 - Formal Methods
+- Student
 date: "2019-09-16T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).

@@ -6,7 +6,7 @@ title: Samuel Teuber
 superuser: true
 
 # Role/position/tagline
-role: Computer Science Student # (pursuing Master Degree)
+role: PhD Student
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -14,21 +14,27 @@ organizations:
   url: https://kit.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Interested in theoretical computer science and formal methods per se as well as for software and machine learning verification.
+bio: Interested in formal methods for software and machine learning verification with a focus on cyber-physical systems and algorithmic fairness.
 
 # Interests to show in About widget
 interests:
 - Formal Methods
-- Software Verification
-- Machine Learning Verification
-- Theoretical Computer Science
+- Software & ML Verification
+- Cyber-Physical Systems
+- Algorithmic Fairness
 
 # Education to show in About widget
 education:
   courses:
-  - course: Pursuing M.Sc. in Computer Science
+  - course: PhD Student in Computer Science
     institution: Karlsruhe Institute of Technology
-    year: 2020-today
+    year: 2022-present
+  - course: Master's Thesis via interACT
+    institution: Logical Systems Lab, Carnegie Mellon Univeristy
+    year: 2022
+  - course: M.Sc. in Computer Science
+    institution: Karlsruhe Institute of Technology
+    year: 2020-2022
   - course: ERASMUS Exchange
     institution: ENSIMAG, Grenoble
     year: 2017-2018
@@ -46,7 +52,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:samuel@samweb.org'
+  link: 'mailto:teuber@kit.edu'
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/teuber_dev
@@ -77,7 +83,10 @@ email: ""
 highlight_name: true
 ---
 
-My name is Samuel Teuber and I am a Master Student of Computer Science at KIT, Karlsruhe.
-I have previously obtained a B.Sc. degree in Computer Science at KIT and spent a year abroad in Grenoble, France through the ERASMUS programme.
+I am a PhD Student at Karlsruhe Institute of Technology advised by [Bernhard Beckert](https://formal.kastel.kit.edu/beckert) at the [Application-oriented Formal Verification](https://formal.kastel.kit.edu) group.
+I'm interested in formal methods for software and machine learning verification
+with a focus on cyber-physical systems and algorithmic fairness.
 
-I am interested in theoretical computer science with a focus on formal methods applied to software and machine learning verification.
+I previously obtained a M.Sc. degree in Computer Science from KIT and completed my Master's Thesis in the [Logical Systems Lab](https://www.ls.cs.cmu.edu/) at Carnegie Mellon University under the supervision of [André Platzer](https://lfcps.org/andre.html).
+During my bachelor studies I spent a year abroad at ENSIMAG (Grenoble, France) and
+participated in the [CERN Openlab Summer Student Program](https://openlab.cern/education/cern-openlab-summer-student-programme) (Geneva, Switzerland).

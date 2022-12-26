@@ -3,6 +3,7 @@ title: "Developing a Deca subset compiler"
 summary: "Projet Genie Logiciel, ENSIMAG"
 tags:
 - Other
+- Student
 date: "2018-01-31T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).

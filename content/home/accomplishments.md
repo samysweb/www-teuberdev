@@ -35,7 +35,7 @@ item:
   organization_url: https://openlab.cern
   title: One of the competition winners during the CERN Openlab lightning talks 2018
   url: https://openlab.cern/index.php/lightning-talks-bring-2018-cern-openlab-summer-student-programme-close
-- #date_end: "2017-12-21"
+- date_end: "2022-09-01"
   date_start: "2017-01-01"
   description: "Awarded by the German Catholic Bishops’ Conference and funded by the German Federal Ministry of Science and Research as **one of thirteen government funded scholarship foundations for academic excellence**"
   organization: Cusanuswerk e.V.

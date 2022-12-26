@@ -22,22 +22,34 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: Student Assistant for Software Quantification Research
+  - title: PhD Student
     company: KASTEL / ITI Beckert, KIT
-    company_url: 'https://formal.iti.kit.edu'
+    company_url: 'https://formal.kastel.kit.edu'
     location: Karlsruhe
-    date_start: '2021-04-15'
-    date_end: '2021-10-15'
+    date_start: '2022-09-15'
+
+  # - title: Master's Thesis
+  #   company: Logical Systems Lab, Carnegie Mellon University
+  #   company_url: 'https://www.ls.cs.cmu.edu/'
+  #   location: Pittsburgh
+  #   date_start: '2022-01-01'
+  #   date_end: '2022-06-30'
+
 
   - title: Student Assistant for Software Safety Quantification Research
     company: ITI Beckert, KIT
     company_url: 'https://formal.iti.kit.edu'
     location: Karlsruhe
     date_start: '2020-10-01'
-    date_end: '2020-12-31'
+    date_end: '2021-10-15'
     description: |2-
+      October 2020 - December 2020:  
       Development of [counterSharp](https://github.com/samysweb/counterSharp): A tool for the quantification of C-programs based on specification adherence.  
-      Work will be published in a paper at QEST 2021.
+      Work published at [QEST 2021](/publication/countersharp2021/) and also presented at the Model Counting Workshop 2022.
+
+      April 2021 - October 2021:  
+      Development of a prototype for the quantiative reliability analysis of software coupling
+      architectural and code-level information.
 
   - title: Student Assistant for "Programmierparadigmen"
     company: IPD Snelting, KIT
@@ -65,31 +77,31 @@ experience:
         [**Information on the Project**](/project/cvmfs)
 
 
-  - title: Projet Génie Logiciel
-    company: ENSIMAG
-    company_url: 'https://ensimag.grenoble-inp.fr/'
-    location: Grenoble
-    date_start: '2018-01-01'
-    date_end: '2018-01-31'
-    description: |2-
-        Development of a small compiler for a subset of the language *Deca* in a team of 5 students
+  # - title: Projet Génie Logiciel
+  #   company: ENSIMAG
+  #   company_url: 'https://ensimag.grenoble-inp.fr/'
+  #   location: Grenoble
+  #   date_start: '2018-01-01'
+  #   date_end: '2018-01-31'
+  #   description: |2-
+  #       Development of a small compiler for a subset of the language *Deca* in a team of 5 students
 
-        **Used Technologies:** Java, ANTLR  
-        [**Information on the Project**](/project/projet-gl)
+  #       **Used Technologies:** Java, ANTLR  
+  #       [**Information on the Project**](/project/projet-gl)
 
 
-  - title: Studyplan
-    company: IPD Böhm, KIT
-    company_url: 'https://dbis.ipd.kit.edu/english/index.php'
-    location: Karlsruhe
-    date_start: '2016-10-01'
-    date_end: '2017-03-31'
-    description: |2-
-        During my 3rd semester at KIT I participated in the Practical Software Engineering Project (PSE) in which we developed a web application with a Java based REST-API which was used by a single page JavaScript web app.
-        The application allowed the generation and verification of students' curricula
+  # - title: Studyplan
+  #   company: IPD Böhm, KIT
+  #   company_url: 'https://dbis.ipd.kit.edu/english/index.php'
+  #   location: Karlsruhe
+  #   date_start: '2016-10-01'
+  #   date_end: '2017-03-31'
+  #   description: |2-
+  #       During my 3rd semester at KIT I participated in the Practical Software Engineering Project (PSE) in which we developed a web application with a Java based REST-API which was used by a single page JavaScript web app.
+  #       The application allowed the generation and verification of students' curricula
 
-        **Used Technologies:** Java, MySQL, JavaScript  
-        [**Information on the Project**](/project/studyplan)
+  #       **Used Technologies:** Java, MySQL, JavaScript  
+  #       [**Information on the Project**](/project/studyplan)
         
   - title: Student Assistant
     company: IT-Centre for the humanities, LMU

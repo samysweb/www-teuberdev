@@ -3,6 +3,7 @@ title: "Efficient unpacking of required software from CVMFS"
 summary: CERN Openlab Summer Student Internship
 tags:
 - Other
+- Student
 date: "2018-08-31T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
