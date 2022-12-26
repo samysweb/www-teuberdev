@@ -10,7 +10,7 @@ headless: true
 weight: 20
 
 title: Pittsburgh 2022
-subtitle: 'Blog about my time in Pittsburgh'
+subtitle: 'Blog about my time in Pittsburgh (in German)'
 
 content:
   # Page type to display. E.g. post, talk, publication...
