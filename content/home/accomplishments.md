@@ -34,7 +34,8 @@ item:
   organization: CERN Openlab
   organization_url: https://openlab.cern
   title: One of the competition winners during the CERN Openlab lightning talks 2018
-  url: https://openlab.cern/index.php/lightning-talks-bring-2018-cern-openlab-summer-student-programme-close
+  url: https://web.archive.org/web/20190613062743/https://openlab.cern/lightning-talks-bring-2018-cern-openlab-summer-student-programme-close
+  #url: https://openlab.cern/index.php/lightning-talks-bring-2018-cern-openlab-summer-student-programme-close
 - date_end: "2022-09-01"
   date_start: "2017-01-01"
   description: "Awarded by the German Catholic Bishops’ Conference and funded by the German Federal Ministry of Science and Research as **one of thirteen government funded scholarship foundations for academic excellence**"
@@ -42,4 +43,11 @@ item:
   organization_url: https://www.cusanuswerk.de
   title: 'Scholarship holder at Cusanuswerk e.V.'
   url: ""
+- date_end: ""
+  date_start: "2023-07-28"
+  organization: Department of Informatics, KIT
+  organization_url: https://www.informatik.kit.edu
+  title: Award for the best Master's Thesis in 2022/2023
+  #description: "My thesis concerned with the transfer of safety guarantees for Cyber-Physical Systems from differential dynamic logic to neural network controllers."
+  url: https://www.informatik.kit.edu/7054_13223.php#gallery-12
 ---

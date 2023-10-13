@@ -32,7 +32,7 @@ experience:
         The climate crisis is an existential threat to our society.  
         For this reason, I volunteered for nearly one year organizing strikes and other events of Fridays for Future Karlsruhe.  
         During the time I helped in both, event organization and policy development.  
-        However, due to limited time resources, I had to cut down on my activities in 2020.
+        However, due to limited time resources, I had to cut down on my activities since 2020.
   - title: Network Administration
     company: Hermann-Ehlers-Kolleg
     company_url: 'https://www.hek.whka.de'
