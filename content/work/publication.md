@@ -34,10 +34,10 @@ design:
   #   2 = Compact
   #   3 = Card
   #   4 = Citation (publication only)
-  columns: '1'
-  view: 2
+  columns: 1
+  view: 4
 ---
 
-<!--{{% callout note %}}
-Quickly discover relevant content by [filtering publications](../publication/).
-{{% /callout %}}-->
+{{% callout note %}}
+For filtering options click [here](../publication/).
+{{% /callout %}}

@@ -18,15 +18,15 @@ publishDate: "2023-06-01T00:00:00Z"
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["3"]
+publication_types: ["9"]
 
 # Publication name and optional abbreviated publication name.
 publication: 2nd European Workshop on Algorithmic Fairness 2023
 publication_short: In EWAF 2023
 
 abstract: |2-
-  This work presents results on the use of Information-Flow tools for the formal verification of algorithmic fairness properties. The problem of enforcing secure information-flow was originally studied in the context of information security: If secret information may “flow” through an algorithm in such a way that it can influence the program’s output, we consider that to be insecure information-flow as attackers could potentially observe (parts of) the secret. Due to its wide-spread use, there exist numerous tools for analyzing secure information-flow properties. Recent work showed that there exists a strong correspondence between secure information-flow and algorithmic fairness:
-  If protected group attributes are treated as secret program inputs, then secure information-flow means that these “secret” attributes cannot influence the result of a program. We demonstrate that off-the-shelf tools for information-flow can be used to formally analyze algorithmic fairness properties including established notions such as (conditional) demographic parity as well as a new quantitative notion named fairness spread.
+  This work presents results on the use of Information-Flow tools for the formal verification of algorithmic fairness properties. The problem of enforcing secure information-flow was originally studied in the context of information security: If secret information may "flow" through an algorithm in such a way that it can influence the program’s output, we consider that to be insecure information-flow as attackers could potentially observe (parts of) the secret. Due to its wide-spread use, there exist numerous tools for analyzing secure information-flow properties. Recent work showed that there exists a strong correspondence between secure information-flow and algorithmic fairness:
+  If protected group attributes are treated as secret program inputs, then secure information-flow means that these "secret" attributes cannot influence the result of a program. We demonstrate that off-the-shelf tools for information-flow can be used to formally analyze algorithmic fairness properties including established notions such as (conditional) demographic parity as well as a new quantitative notion named fairness spread.
 
 # Summary. An optional shortened abstract.
 summary: We demonstrate preliminary results on strong connections between Information Flow and Algorithmic Fairness Analysis
@@ -37,7 +37,7 @@ tags:
 - Program Analysis
 
 # Display this page in the Featured widget?
-featured: true
+featured: false
 
 # Custom links (uncomment lines below)
 # links:
