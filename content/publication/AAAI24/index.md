@@ -48,7 +48,7 @@ featured: true
 url_pdf: 'https://arxiv.org/abs/2312.10128'
 url_code: 'https://zenodo.org/records/10385361'
 #url_dataset: 'https://github.com/samysweb/counterSharp-experiments'
-url_poster: ''
+url_poster: '/media/pdf/AAAI_24_Poster.pdf'
 url_project: ''
 url_slides: ''
 url_source: ''
