@@ -12,7 +12,7 @@ authors:
 - Robert Heinrich
 - Alexander Weigl
 
-date: "2024-04-08T00:00:00Z"
+date: "2024-01-08T00:00:00Z"
 doi: "10.1145/3605098.3636008"
 
 # Schedule page publish date (NOT publication's date).
