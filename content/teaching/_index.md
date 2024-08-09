@@ -7,6 +7,7 @@ This page summarizes my teaching experiences and materials.
 | Semester		| Course				| Role				| Materials		|
 |:-------------:|:---------------------|:-----------------:|:-------------:|
 | Winter 2023/24| [Formale Systeme](https://formal.kastel.kit.edu/teaching/FormSysWS2324/) | Teaching assistant | (see webpage/ILIAS) |
+| Summer 2023| Proseminar "Differentiable Programming" | Organizer | (see webpage/ILIAS) |
 | Winter 2022/23| [Formale Systeme](https://formal.kastel.kit.edu/teaching/FormSysWS2223/) | Teaching assistant | (see webpage/ILIAS) |
 | Winter 2020/21| [Programmierparadigmen](https://pp.ipd.kit.edu/lehre/WS202021/paradigmen/uebung/) | Student teaching assistant | [here](/propa/2020) |
 | Winter 2019/20| [Programmierparadigmen](https://pp.ipd.kit.edu/lehre/WS201920/paradigmen/uebung/) | Student teaching assistant | [here](/propa/2019) |
