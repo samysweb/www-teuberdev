@@ -6,7 +6,7 @@ title: Samuel Teuber
 superuser: true
 
 # Role/position/tagline
-role: Doctoral Researcher
+role: PhD Student
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -26,7 +26,7 @@ interests:
 # Education to show in About widget
 education:
   courses:
-  - course: Doctoral Researcher in Computer Science
+  - course: PhD Student in Computer Science
     institution: Karlsruhe Institute of Technology
     year: 2022-present
   - course: Master's Thesis via interACT
@@ -83,9 +83,8 @@ email: ""
 highlight_name: true
 ---
 
-I am a Doctoral Researcher at Karlsruhe Institute of Technology advised by [Bernhard Beckert](https://formal.kastel.kit.edu/beckert) at the [Application-oriented Formal Verification](https://formal.kastel.kit.edu) group.
-I'm interested in formal methods for software and machine learning verification
-with a focus on cyber-physical systems and algorithmic fairness.
+I am a PhD Student at Karlsruhe Institute of Technology (KIT) in Germany advised by [Bernhard Beckert](https://formal.kastel.kit.edu/beckert) at the [Application-oriented Formal Verification](https://formal.kastel.kit.edu) group.
+My research interests lie at the intersection of (deductive) software and AI verification with a focus on applications in Cyber-Physical Systems and Algorithmic Fairness.
 
 I previously obtained a M.Sc. degree in Computer Science from KIT and completed my Master's Thesis in the [Logical Systems Lab](https://www.ls.cs.cmu.edu/) at Carnegie Mellon University under the supervision of [André Platzer](https://lfcps.org/andre.html).
 During my bachelor studies I spent a year abroad at ENSIMAG (Grenoble, France) and
