@@ -38,7 +38,7 @@ experience:
     company_url: 'https://www.hek.whka.de'
     location: Karlsruhe
     date_start: '2015-12-01'
-    #date_end: '2018-08-17'
+    date_end: '2023-05-31'
     description: |2-
         Administration and development of the network infrastructure in my students' residence.
   - title: Spokesperson of the students' residence
