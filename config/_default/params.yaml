@@ -1,0 +1,136 @@
+features:
+  math:
+    enable: true
+  privacy_pack:
+    enable: true
+appearance:
+  color: emerald
+  mode: system
+  theme_day: forest
+  theme_dark: forest
+  day_night: false
+  font: native
+  font_size: L
+  site_type: Person
+  local_business_type: ""
+  org_name: ""
+  description: ""
+  highlight: false
+  highlight_languages:
+    - js
+    - haskell
+    - prolog
+    - python
+    - c
+    - java
+  highlight_style: github-dark
+  math: true
+  diagram: false
+  privacy_pack: false
+  edit_page:
+    repo_url: ""
+    content_dir: ""
+    repo_branch: main
+    editable:
+      page: false
+      post: false
+      book: false
+  show_related:
+    book: true
+    page: false
+    post: true
+    project: true
+    publication: true
+    talk: true
+  email: teuber@kit.edu
+  phone: ""
+  date_format: Jan 2, 2006
+  time_format: 15:04
+  address_format: en-us
+  main_menu:
+    align: l
+    show_logo: true
+    highlight_active_link: true
+    show_language: false
+    show_day_night: true
+    show_search: true
+  reading_time: true
+  section_pager: false
+  docs_section_pager: true
+  abstract_length: 135
+  plugins_js: []
+avatar:
+  gravatar: false
+  shape: circle
+publications:
+  date_format: January 2006
+  citation_style: apa
+projects:
+  post_view: 2
+  publication_view: 2
+  talk_view: 2
+comments:
+  engine: 0
+  commentable:
+    page: true
+    post: true
+    docs: true
+    project: true
+    publication: true
+    talk: true
+  disqus:
+    shortname: ""
+    show_count: true
+  commento:
+    url: ""
+search:
+  engine: 1
+  algolia:
+    app_id: ""
+    api_key: ""
+    index_name: ""
+    show_logo: false
+map:
+  engine: 0
+  api_key: ""
+  zoom: 15
+marketing:
+  analytics:
+    baidu_tongji: ''
+    fathom: ''
+    google_analytics: ''
+    pirsch: ''
+    plausible: ''
+  seo:
+    description: >-
+      Samuel Teuber is a PhD student at Karlsruhe Institute of Technology (KIT) in Germany, advised by Bernhard Beckert at the Application-Oriented Formal Verification group. His research interests lie at the intersection of (deductive) software and AI verification with a focus on applications in Cyber-Physical Systems and Algorithmic Fairness. Previously, he obtained an M.Sc. degree in Computer Science at KIT and completed his Master's Thesis in the Logical Systems Lab at Carnegie Mellon University under the supervision of André Platzer.
+    local_business_type: ''
+    org_name: ''
+    site_type: Person
+    twitter: teuber_dev
+  verification:
+    baidu: ''
+    google: ''
+cms:
+  netlify_cms: false
+icon:
+  pack:
+    ai: true
+footer:
+  copyright:
+    license:
+      allow_commercial: false
+      allow_derivatives: false
+      enable: true
+      share_alike: true
+    notice: '© {year} Samuel Teuber. This work is licensed under {license}'
+header:
+  navbar:
+    blox: navbar
+    enable: true
+    fixed_to_top: true
+    logo:
+      text: Samuel Teuber
+locale:
+  date_format: '2. Jan 2006'
+  time_format: '15:04'

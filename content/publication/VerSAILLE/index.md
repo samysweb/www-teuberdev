@@ -19,7 +19,7 @@ publishDate: "2024-02-15T00:00:00Z"
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["1"]
+publication_types: ["paper-conference"]
 
 # Publication name and optional abbreviated publication name.
 publication: Thirty-Eighth Annual Conference on Neural Information Processing Systems
@@ -32,9 +32,9 @@ abstract: |2-
 summary: We present the first approach for the combination of differential dynamic logic (dL) and NN verification. By joining forces, we can exploit the efficiency of NN verification tools while retaining the rigor of dL. This yields infinite-time horizon safety guarantees for neural network control systems.
 
 tags:
+- Cyber-Physical Systems
 - Neural Network Verification 
 - Formal Methods
-- Cyber-Physical Systems
 - Differential Dynamic Logic
 - Dynamic Logic
 - Infinite-Time Horizon Safety

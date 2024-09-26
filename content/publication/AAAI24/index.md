@@ -18,7 +18,7 @@ publishDate: "2023-12-15T00:00:00Z"
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["1"]
+publication_types: ["paper-conference"]
 
 # Publication name and optional abbreviated publication name.
 publication: The 38th Annual AAAI Conference on Artificial Intelligence
@@ -33,8 +33,8 @@ abstract: |2-
 summary: An exploration of the relationships between qualitative and quantitative information flow and various causal and non-causal fairness definitions with applications to program analysis.
 
 tags:
-- Formal Methods
 - Algorithmic Fairness
+- Formal Methods
 - Program Analysis
 
 # Display this page in the Featured widget?
