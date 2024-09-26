@@ -19,11 +19,11 @@ publishDate: "2024-02-15T00:00:00Z"
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["3"]
+publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-#publication: The 39th ACM/SIGAPP Symposium on Applied Computing
-#publication_short: In SAC 2024
+publication: Thirty-Eighth Annual Conference on Neural Information Processing Systems
+publication_short: In NeurIPS 2024
 
 abstract: |2-
   While neural networks (NNs) have a large potential as goal-oriented controllers for Cyber-Physical Systems, verifying the safety of neural network based control systems (NNCSs) poses significant challenges for the practical use of NNs -- especially when safety is needed for unbounded time horizons. One reason for this is the intractability of NN and hybrid system analysis. We introduce VerSAILLE (Verifiably Safe AI via Logically Linked Envelopes): The first approach for the combination of differential dynamic logic (dL) and NN verification. By joining forces, we can exploit the efficiency of NN verification tools while retaining the rigor of dL. We reflect a safety proof for a controller envelope in an NN to prove the safety of concrete NNCS on an infinite-time horizon. The NN verification properties resulting from VerSAILLE typically require nonlinear arithmetic while efficient NN verification tools merely support linear arithmetic. To overcome this divide, we present Mosaic: The first sound and complete verification approach for polynomial real arithmetic properties on piece-wise linear NNs. Mosaic lifts off-the-shelf tools for linear properties to the nonlinear setting. An evaluation on case studies, including adaptive cruise control and airborne collision avoidance, demonstrates the versatility of VerSAILLE and Mosaic: It supports the certification of infinite-time horizon safety and the exhaustive enumeration of counterexample regions while significantly outperforming State-of-the-Art tools in closed-loop NNV.
@@ -52,7 +52,7 @@ url_pdf: 'https://arxiv.org/abs/2402.10998'
 #url_dataset: 'https://github.com/samysweb/counterSharp-experiments'
 #url_poster: '/media/pdf/AAAI_24_Poster.pdf'
 url_project: 'https://github.com/samysweb/NCubeV'
-url_slides: ''
+url_slides: 'https://github.com/samysweb/VerSAILLE/blob/c489a056defa09012c7c9077db57209246d4ee99/documents/Teuber-SAIV-2024.pdf'
 url_source: ''
 #url_video: 'https://www.youtube.com/watch?v=xUysflQIftE&t=3083s'
 
