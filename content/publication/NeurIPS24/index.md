@@ -43,15 +43,15 @@ tags:
 featured: true
 
 # Custom links (uncomment lines below)
-# links:
-#  - name: CEUR-
-#    url: https://ceur-ws.org/Vol-3442/paper-21.pdf
+links:
+ - name: Teaching Resources
+   url: https://github.com/samysweb/versaille
 
 url_pdf: 'https://arxiv.org/abs/2402.10998'
 #url_code: 'https://zenodo.org/records/10385361'
 #url_dataset: 'https://github.com/samysweb/counterSharp-experiments'
 #url_poster: '/media/pdf/AAAI_24_Poster.pdf'
-url_project: 'https://github.com/samysweb/NCubeV'
+url_code: 'https://github.com/samysweb/NCubeV'
 url_slides: 'https://github.com/samysweb/VerSAILLE/blob/c489a056defa09012c7c9077db57209246d4ee99/documents/Teuber-SAIV-2024.pdf'
 url_source: ''
 #url_video: 'https://www.youtube.com/watch?v=xUysflQIftE&t=3083s'

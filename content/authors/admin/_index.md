@@ -83,7 +83,7 @@ work:
       architectural and code-level information.
       Work published at [SAC 2024](/publication/sac24)
 
-  - position: Student Assistant for "Programmierparadigmen"
+  - position: Student Teaching Assistant for "Programmierparadigmen"
     company_name: IPD Snelting, KIT
     company_url: 'https://pp.info.uni-karlsruhe.de/'
     date_start: '2019-10-01'
@@ -162,6 +162,8 @@ profiles:
   link: https://www.linkedin.com/in/p-samuel-m-teuber-072308172/?locale=en_US
 - icon: brands/orcid
   link: https://orcid.org/0000-0001-7945-9110
+- icon: brands/google-scholar
+  link: https://scholar.google.com/citations?user=0dq6DCQAAAAJ&hl=en
 
 awards:
 - date: "2016-09-30"
