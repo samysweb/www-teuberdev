@@ -118,12 +118,12 @@ icon:
     ai: true
 footer:
   copyright:
-    license:
-      allow_commercial: false
-      allow_derivatives: false
-      enable: true
-      share_alike: true
-    notice: '© {year} Samuel Teuber. This work is licensed under {license}'
+    # license:
+    #   allow_commercial: false
+    #   allow_derivatives: false
+    #   enable: true
+    #   share_alike: true
+    notice: '© {year} Samuel Teuber'
 header:
   navbar:
     blox: navbar
