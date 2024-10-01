@@ -4,7 +4,7 @@ type: single
 authors:
   - admin
 ---
-Following up on the publication of our AAAI 2024 paper ["An Information-Flow Perspective on Algorithmic Fairness"](http://localhost:1313/publication/aaai24/), [Marco Favier](https://www.uantwerpen.be/en/staff/marco-favier/publications/) kindly notified us about a mistake in our publication:
+Following up on the publication of our AAAI 2024 paper ["An Information-Flow Perspective on Algorithmic Fairness"](http://localhost:1313/publication/aaai24/), [Marco Favier](https://www.uantwerpen.be/en/staff/marco-favier/) kindly notified us about a mistake in our publication:
 
 Section 3.2, in particular Lemma 2, states that *Restricted Information Flow* can be used to prove conditional demographic parity.
 This Lemma is wrong, as there exists a counterexample (provided by Marco Favier):
