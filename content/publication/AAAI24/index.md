@@ -41,9 +41,9 @@ tags:
 featured: true
 
 # Custom links (uncomment lines below)
-# links:
-#  - name: CEUR-
-#    url: https://ceur-ws.org/Vol-3442/paper-21.pdf
+links:
+ - name: Corrigendum
+   url: /corrigenda/aaai24
 
 url_pdf: 'https://arxiv.org/abs/2312.10128'
 url_code: 'https://zenodo.org/records/10385361'
