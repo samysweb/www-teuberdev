@@ -83,9 +83,11 @@ sections:
       text: |-
         I contributed to reviewing activities in the following roles:
         
-        **Reviewer:** AAAI'24 (SRRAI Track), NeurIPS'24
+        **Conference Reviews:** AAAI'24 (SRRAI Track), NeurIPS'24
 
-        **Subreviewer:** FM'24 (x2), ICTAC'24, iFM'23, LICS'23
+        **Subreviews:** FM'24 (x2), ICTAC'24, iFM'23, LICS'23
+
+        **Journal Reviews:** Sci. Comput. Program.
     design:
       columns: '1'
   # - block: collection
