@@ -50,7 +50,7 @@ links:
  - name: DOI
    url: https://doi.org/10.1007/978-3-031-75387-9_15
 
-#url_pdf: ''
+url_pdf: './isola24.pdf'
 #url_code: ''
 #url_dataset: ''
 #url_poster: ''
@@ -81,4 +81,4 @@ links:
 #   Otherwise, set `slides: ""`.
 # slides: example
 ---
-This work is **forthcoming**, links will be added once available.
+Recent investigations hint at the ability of large language models (LLMs) to generate formal specifications for given program code. In this work, we systematically discuss and categorize different use cases and application scenarios that combine specification synthesis via LLMs with deductive program verification. We present preliminary quantitative experiments on the capabilities of LLMs to generate correct specifications. To this end, we use a prototypical integration of GPT (versions 3.5 and 4o) with the deductive program verifier KeY and the bounded model checker JJBMC. We evaluated our prototype on a set of Java programs that are partially annotated with specifications written in the Java Modeling Language (JML). We show that GPT 4o generates correct annotations in approximately half of all instances across the investigated scenarios. For the case of faulty specifications, we investigate how a feedback loop can help to improve the original answer. Finally, we present a vision of how Large Language Models may support rigorous formal verification of software systems and describe the necessary next steps in this direction.
