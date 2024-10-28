@@ -46,9 +46,9 @@ tags:
 featured: false
 
 # Custom links (uncomment lines below)
-# links:
-#  - name: CEUR-
-#    url: https://ceur-ws.org/Vol-3442/paper-21.pdf
+links:
+ - name: DOI
+   url: https://doi.org/10.1007/978-3-031-75387-9_15
 
 #url_pdf: ''
 #url_code: ''
