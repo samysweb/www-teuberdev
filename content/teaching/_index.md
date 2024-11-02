@@ -8,6 +8,7 @@ This page summarizes my teaching experiences and materials.
 
 | Semester		| Course				| Role				| Materials		|
 |:-------------:|:---------------------|:-----------------:|:-------------:|
+| October 2024  | [Verification and Validation of Autonomous Systems with Neural Network Components](https://laiv.uk/laiv-news/#post-2030) (Heriot-Watt University Edinburgh) | Guest Lecture + Lab <br> on VerSAILLE & Mosaic | [see GitHub](https://github.com/samysweb/VerSAILLE/) |   
 | Winter 2024/25| [Formal Systems](https://formal.kastel.kit.edu/teaching/FormSysWS2425/) | Teaching assistant | (see webpage/ILIAS) |
 | Winter 2024/25| [Seminar "Neural Networks in Formal Verification"](https://formal.kastel.kit.edu/teaching/Seminar-WS2425/) | Co-Organizer | (see webpage/ILIAS) |
 | Winter 2023/24| [Formal Systems](https://formal.kastel.kit.edu/teaching/FormSysWS2324/) | Teaching assistant | (see webpage/ILIAS) |
