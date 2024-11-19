@@ -151,8 +151,10 @@ work:
 profiles:
 - icon: envelope
   link: 'mailto:teuber@kit.edu'
-- icon: brands/twitter
-  link: https://twitter.com/teuber_dev
+#- icon: brands/twitter
+#  link: https://twitter.com/teuber_dev
+- icon: bsky
+  link: https://bsky.app/profile/teuber.bsky.social
 # - icon: graduation-cap  # Alternatively, use `google-scholar` icon from `ai` icon pack
 #   icon_pack: fas
 #   link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
