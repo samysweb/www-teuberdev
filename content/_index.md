@@ -56,6 +56,7 @@ sections:
   - block: collection
     id: talk
     content:
+      count: 8
       title: Recent / Upcoming Talks
       subtitle: 
       text: 
@@ -83,9 +84,9 @@ sections:
       text: |-
         I contributed to reviewing activities in the following roles:
         
-        **Conference Reviews:** AAAI'24 (SRRAI Track), NeurIPS'24
+        **Conference Reviews:** AAAI'24 (SRRAI Track), NeurIPS'24, AISTATS'25, ICML'25
 
-        **Subreviews:** FM'24 (x2), ICTAC'24, iFM'23, LICS'23
+        **Subreviews:** LICS'25, FM'24 (x2), ICTAC'24, iFM'23, LICS'23
 
         **Journal Reviews:** Sci. Comput. Program.
     design:
