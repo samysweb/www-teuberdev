@@ -8,9 +8,12 @@ This page summarizes my teaching experiences and materials.
 
 | Semester		| Course				| Role				| Materials		|
 |:-------------:|:---------------------|:-----------------:|:-------------:|
+| Summer 2025   | [Lecture "Formal Systems II: Applications"](https://formal.kastel.kit.edu/teaching/FormSys2SoSe2025/?lang=en)<br>2 Lectures on Neural Network Verification (together with Philipp Kern)   |  | (see webpage/ILIAS)   |
+| Summer 2025   | [Seminar "LLMs in Formal Verification"](https://formal.kastel.kit.edu/teaching/Seminar-SS25/)   | Student Advisor | (see webpage/ILIAS)   |
+| Summer 2025   | [Seminar "Fairness and Non-Discrimination from the viewpoint of Computer Science and Philosophy"](https://formal.kastel.kit.edu/teaching/SeminarFairness-SS25/?lang=de)   | Organizer / Student Advisor | (see webpage/ILIAS)   |
 | October 2024  | [Verification and Validation of Autonomous Systems with Neural Network Components](https://laiv.uk/laiv-news/#post-2030) (Heriot-Watt University Edinburgh) | Guest Lecture + Lab <br> on VerSAILLE & Mosaic | [see GitHub](https://github.com/samysweb/VerSAILLE/) |   
 | Winter 2024/25| [Formal Systems](https://formal.kastel.kit.edu/teaching/FormSysWS2425/) | Teaching assistant | (see webpage/ILIAS) |
-| Winter 2024/25| [Seminar "Neural Networks in Formal Verification"](https://formal.kastel.kit.edu/teaching/Seminar-WS2425/) | Co-Organizer | (see webpage/ILIAS) |
+| Winter 2024/25| [Seminar "Neural Networks in Formal Verification"](https://formal.kastel.kit.edu/teaching/Seminar-WS2425/) | Co-Organizer / Student Advisor | (see webpage/ILIAS) |
 | Winter 2023/24| [Formal Systems](https://formal.kastel.kit.edu/teaching/FormSysWS2324/) | Teaching assistant | (see webpage/ILIAS) |
 | Summer 2023| [Proseminar "Differentiable Programming"](https://campus.studium.kit.edu/events/catalog.php#!campus/all/event.asp?gguid=0x5B3779B188D041E19781BF0B1C54DEA4) | Co-Organizer / Student Advisor | (see webpage/ILIAS) |
 | Summer 2023| [Seminar "Fairness and Non-Discrimination from the Perspective of Ethics and Computer Science"](https://campus.studium.kit.edu/events/catalog.php#!campus/all/event.asp?gguid=0x5B3779B188D041E19781BF0B1C54DEA4) | Co-Organizer | (see webpage/ILIAS) |
@@ -23,6 +26,9 @@ I have advised student research projects/theses on the following topics:
 
 | Semester      | Topic                                                     | Type              |
 |:-------------:|:---------------------------------------------------------:|:-----------------:|
+| 2025/26   | Synthesis of Auxiliary Specifications via Large Language Models | 1 year research internship |
+| 2024/25   | Efficient NN Verification via LP-based Conflict Learning | 1 year research internship |
+| Summer 2024   | Generation of submethod specifications using large language models (german) | Research Lab |
 | Summer 2024   | Generation of loop specifications using large language models (german) | Research Lab |
 | Summer 2024   | Conflict Analysis for Simplex-Based Neural Network Verification via Farkas Vectors | Bachelor's Thesis |
 | Summer 2024   | Improving Zonotope-Based Neural Network Verification via Gradient-Based Optimization | Bachelor's Thesis | 
