@@ -35,8 +35,8 @@ summary: |2-
   Furthermore, we propose an improved approximation for confidence-based verification of NNs with softmax output.
 
 tags:
-- Formal Methods
 - Neural Network Verification 
+- Formal Methods
 - Compression
 - Equivalence
 - Differential Verification
