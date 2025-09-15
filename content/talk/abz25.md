@@ -8,6 +8,8 @@ authors:
 links:
  - name: Announcement
    url: "https://abz-conf.org/site/2025/program/"
+ - name: Slides
+   url: "media/slides/abz2025.pdf"
  - name: Paper
    url: /publication/abz25/
 ---
