@@ -8,6 +8,8 @@ This page summarizes my teaching experiences and materials.
 
 | Semester		| Course				| Role				| Materials		|
 |:-------------:|:---------------------|:-----------------:|:-------------:|
+| November 2025  | [Verification and Validation of Autonomous Systems with Neural Network Components](https://laiv.uk/laiv-news/#post-2030) (Heriot-Watt University Edinburgh) | Guest Lecture + Lab <br> on VerSAILLE & Mosaic | [see GitHub](https://github.com/samysweb/VerSAILLE/) |   
+| Winter 2025/26| [Formal Systems](https://formal.kastel.kit.edu/teaching/FormSysWS2526/) | Teaching assistant + Substitute Lecturer (first order logic) | (see webpage/ILIAS) |
 | Summer 2025   | [Lecture "Formal Systems II: Applications"](https://formal.kastel.kit.edu/teaching/FormSys2SoSe2025/?lang=en)<br>2 Lectures on Neural Network Verification (together with Philipp Kern)   |  | (see webpage/ILIAS)   |
 | Summer 2025   | [Seminar "LLMs in Formal Verification"](https://formal.kastel.kit.edu/teaching/Seminar-SS25/)   | Student Advisor | (see webpage/ILIAS)   |
 | Summer 2025   | [Seminar "Fairness and Non-Discrimination from the viewpoint of Computer Science and Philosophy"](https://formal.kastel.kit.edu/teaching/SeminarFairness-SS25/?lang=de)   | Organizer / Student Advisor | (see webpage/ILIAS)   |
@@ -26,7 +28,12 @@ I have advised student research projects/theses on the following topics:
 
 | Semester      | Topic                                                     | Type              |
 |:-------------:|:---------------------------------------------------------:|:-----------------:|
+| Winter 2025/26 | Reengineering NCubeV's Backends | HiWi |
+| Winter 2025/26 | Differential Verification for Computational Graphs | Bachelor's Thesis |
+| Winter 2025/26 | LP-free Neuron Splitting for Neural Network Equivalence Verification | Bachelor's Thesis |
+| Winter 2025/26 | Differential Verification of Non-ReLU Neural Networks | Bachelor's Thesis |
 | 2025/26   | Synthesis of Auxiliary Specifications via Large Language Models | 1 year research internship |
+| Summer 2025   | Experimental Evaluation of Tools and LLMs for Generating Loop Invariants | Research Lab |
 | 2024/25   | Efficient NN Verification via LP-based Conflict Learning | 1 year research internship |
 | Summer 2024   | Generation of submethod specifications using large language models (german) | Research Lab |
 | Summer 2024   | Generation of loop specifications using large language models (german) | Research Lab |

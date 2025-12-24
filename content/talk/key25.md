@@ -1,5 +1,5 @@
 ---
-title: Dynamic Logica à la Locale
+title: Dynamic Logic à la Locale
 summary: KeY Symposium 2025 (Manigod, France)
 date: 2025-08-06
 authors:
