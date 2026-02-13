@@ -85,13 +85,13 @@ sections:
         I contributed to reviewing activities in the following roles:
         
         **Conference Reviews:**  
-        NeurIPS'25, ICML'25, AISTATS'25, AAAI'24 (SRRAI Track), NeurIPS'24
+        NeurIPS'25, AAAI'25, ICML'25, AISTATS'25, AAAI'24 (SRRAI Track), NeurIPS'24
 
         **Subreviews:**  
-        POPL'25, LICS'25, FM'24 (x2), ICTAC'24, iFM'23, LICS'23
+        FM'26 (x2), POPL'25, LICS'25, FM'24 (x2), ICTAC'24, iFM'23, LICS'23
 
         **Journal Reviews:**  
-        Sci. Comput. Program. (2024)
+        Sci. Comput. Program. (2024/2025)
     design:
       columns: '1'
   # - block: collection
