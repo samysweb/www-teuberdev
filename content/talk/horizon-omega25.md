@@ -1,8 +1,8 @@
 ---
 title: Guaranteed Safe AI Seminars
 summary: Horizon Omega (online)
-date: 2024-04-09
-publishDate: 2024-02-15
+date: 2026-04-09
+publishDate: 2026-02-15
 authors:
   - admin
 links:
