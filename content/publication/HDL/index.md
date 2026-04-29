@@ -10,17 +10,20 @@ authors:
 - André Platzer
 - Bernhard Beckert
 
-date: "2025-07-11T00:00:00Z"
+date: "2026-04-03T00:00:00Z"
 #doi: "10.1145/3605098.3636008"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2025-07-15T00:00:00Z"
+publishDate: "2026-04-03T00:00:00Z"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["preprint"]
+publication_types: ["article-journal"]
+
+publication: Proceedings of the ACM on Programming Languages (PLDI)
+publication_short: In PLDI 2026
 
 # Publication name and optional abbreviated publication name.
 
@@ -40,12 +43,12 @@ tags:
 - Cyber-Physical Systems
 
 # Display this page in the Featured widget?
-featured: false
+featured: true
 
 # Custom links (uncomment lines below)
-# links:
-#  - name: Teaching Resources
-#    url: 
+links:
+ - name: Isabelle Formalization
+   url: https://doi.org/10.5281/zenodo.19551156
 
 url_pdf: 'https://arxiv.org/pdf/2507.08581'
 #url_code: 'https://zenodo.org/records/10385361'
