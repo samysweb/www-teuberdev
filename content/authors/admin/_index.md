@@ -6,7 +6,7 @@ title: Samuel Teuber
 superuser: true
 
 # Role/position/tagline
-role: PhD Student
+role: PhD Candidate
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -14,18 +14,18 @@ organizations:
   url: https://kit.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Interested in formal methods for software and machine learning verification with a focus on cyber-physical systems and algorithmic fairness.
+bio: Researching formal verification of AI-based heterogeneous systems, with applications in neural network control and algorithmic fairness.
 
 # Interests to show in About widget
 interests:
 - Formal Methods
-- Software & ML Verification
+- Software & AI Verification
 - Cyber-Physical Systems
 - Algorithmic Fairness
 
 # Education to show in About widget
 education:
-  - area: PhD Student in Computer Science
+  - area: PhD Candidate in Computer Science
     institution: Karlsruhe Institute of Technology
     year: 2022-present
   - area: Master's Thesis via interACT
@@ -54,7 +54,7 @@ education:
     date_end: '2015-07-31'
 
 work:
-  - position: PhD Student
+  - position: PhD Candidate
     company_name: KASTEL / ITI Beckert, KIT
     company_url: 'https://formal.kastel.kit.edu'
     date_start: '2022-09-15'
@@ -206,8 +206,9 @@ email: ""
 highlight_name: true
 ---
 
-I am a PhD Student at Karlsruhe Institute of Technology (KIT) in Germany advised by [Bernhard Beckert](https://formal.kastel.kit.edu/beckert) at the [Application-oriented Formal Verification](https://formal.kastel.kit.edu) group.
-My research interests lie at the intersection of (deductive) software and AI verification with a focus on applications in Cyber-Physical Systems and Algorithmic Fairness.
+I am a PhD Candidate at Karlsruhe Institute of Technology (KIT) in Germany advised by [Bernhard Beckert](https://formal.kastel.kit.edu/beckert) at the [Application-oriented Formal Verification](https://formal.kastel.kit.edu) group.
+My research develops logical foundations and practical tools for the verification of *AI-based heterogeneous systems*, that is, systems combining software, AI, and physical components.
+Concrete applications include the formal verification of neural network control systems and the verification of algorithmic fairness.
 
 I previously obtained a M.Sc. degree in Computer Science from KIT and completed my Master's Thesis in the [Logical Systems Lab](https://www.ls.cs.cmu.edu/) at Carnegie Mellon University under the supervision of [André Platzer](https://lfcps.org/andre.html).
 During my bachelor studies I spent a year abroad at ENSIMAG (Grenoble, France) and

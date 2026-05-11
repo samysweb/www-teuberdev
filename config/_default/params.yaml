@@ -103,7 +103,8 @@ marketing:
     plausible: ''
   seo:
     description: >-
-      Samuel Teuber is a PhD student at Karlsruhe Institute of Technology (KIT) in Germany, advised by Bernhard Beckert at the Application-Oriented Formal Verification group. His research interests lie at the intersection of (deductive) software and AI verification with a focus on applications in Cyber-Physical Systems and Algorithmic Fairness. Previously, he obtained an M.Sc. degree in Computer Science at KIT and completed his Master's Thesis in the Logical Systems Lab at Carnegie Mellon University under the supervision of André Platzer.
+      Samuel Teuber is a PhD candidate at Karlsruhe Institute of Technology (KIT) in Germany, advised by Bernhard Beckert at the Application-Oriented Formal Verification group.
+      His research develops logical foundations and practical tools for the verification of *AI-based heterogeneous systems*, that is, systems combining software, AI, and physical components. Concrete applications are the formal verification of neural network control systems and the verification of algorithmic fairness. Previously, he obtained an M.Sc. degree in Computer Science at KIT and completed his Master's Thesis in the Logical Systems Lab at Carnegie Mellon University under the supervision of André Platzer.
     local_business_type: ''
     org_name: ''
     site_type: Person
