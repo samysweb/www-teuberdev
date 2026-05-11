@@ -23,6 +23,7 @@ publication_types: ["paper-conference"]
 # Publication name and optional abbreviated publication name.
 publication: The 38th Annual AAAI Conference on Artificial Intelligence
 publication_short: In AAAI 2024
+venue_label: "AAAI'24"
 
 abstract: |2-
   This work presents insights gained by investigating the relationship between algorithmic fairness and the concept of secure information flow. The problem of enforcing secure information flow is well-studied in the context of information security: If secret information may "flow" through an algorithm or program in such a way that it can influence the program's output, then that is considered insecure information flow as attackers could potentially observe (parts of) the secret.

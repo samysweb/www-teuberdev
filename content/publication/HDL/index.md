@@ -24,6 +24,7 @@ publication_types: ["article-journal"]
 
 publication: Proceedings of the ACM on Programming Languages (PLDI)
 publication_short: In PLDI 2026
+venue_label: "PLDI'26"
 
 # Publication name and optional abbreviated publication name.
 
