@@ -9,7 +9,7 @@ authors:
 - Bernhard Beckert
 
 date: "2024-02-20T00:00:00Z"
-doi: ""
+doi: "10.1609/aaai.v38i14.29458"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2023-12-15T00:00:00Z"

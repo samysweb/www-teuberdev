@@ -10,7 +10,7 @@ authors:
 - Bernhard Beckert
 
 date: "2025-10-06T00:00:00Z"
-#doi: "10.1145/3605098.3636008"
+doi: "10.34727/2025/isbn.978-3-85448-084-6_12"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2025-04-01T00:00:00Z"

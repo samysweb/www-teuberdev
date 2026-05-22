@@ -10,7 +10,7 @@ authors:
 - André Platzer
 
 date: "2025-06-10T00:00:00Z"
-#doi: "10.1145/3605098.3636008"
+doi: "10.1007/978-3-031-94533-5_17"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2025-04-01T00:00:00Z"

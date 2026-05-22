@@ -11,7 +11,7 @@ authors:
 - Bernhard Beckert
 
 date: "2025-05-01T00:00:00Z"
-doi: "10.48550/arXiv.2410.20207"
+doi: "10.1007/978-3-031-90653-4_13"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2023-10-28T00:00:00Z"
