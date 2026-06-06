@@ -1,0 +1,244 @@
+{{- $public := site.Data.cv.public -}}
+{{- $private := site.Data.cv.private -}}
+{{- $author := site.GetPage "/authors/admin" -}}
+{{- $flags := $public.tex_flags -}}
+{{- $publications := where site.RegularPages "Section" "publication" -}}
+{{- $journals := where $publications "Params.publication_types" "intersect" (slice "paper-journal" "article-journal" "journal") -}}
+{{- $conferences := where $publications "Params.publication_types" "intersect" (slice "paper-conference" "conference") -}}
+{{- $workshops := where $publications "Params.publication_types" "intersect" (slice "paper-workshop" "Workshop Paper" "workshop-paper" "workshop") -}}
+{{- $preprints := where $publications "Params.publication_types" "intersect" (slice "paper-preprint" "preprint" "3") -}}
+{{- $software := where $publications "Params.publication_types" "intersect" (slice "software") -}}
+{{- $theses := where $publications "Params.publication_types" "intersect" (slice "thesis" "7") -}}
+
+{{- $journalsBib := "" -}}
+{{- range sort $journals "Date" "desc" -}}
+  {{- $bibPath := printf "content/%scite.bib" .File.Dir -}}
+  {{- if fileExists $bibPath -}}
+    {{- $journalsBib = printf "%s\n%s\n" $journalsBib (readFile $bibPath | htmlUnescape) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $conferencesBib := "" -}}
+{{- range sort $conferences "Date" "desc" -}}
+  {{- $bibPath := printf "content/%scite.bib" .File.Dir -}}
+  {{- if fileExists $bibPath -}}
+    {{- $conferencesBib = printf "%s\n%s\n" $conferencesBib (readFile $bibPath | htmlUnescape) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $workshopsBib := "" -}}
+{{- range sort $workshops "Date" "desc" -}}
+  {{- $bibPath := printf "content/%scite.bib" .File.Dir -}}
+  {{- if fileExists $bibPath -}}
+    {{- $workshopsBib = printf "%s\n%s\n" $workshopsBib (readFile $bibPath | htmlUnescape) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $preprintsBib := "" -}}
+{{- range sort $preprints "Date" "desc" -}}
+  {{- $bibPath := printf "content/%scite.bib" .File.Dir -}}
+  {{- if fileExists $bibPath -}}
+    {{- $preprintsBib = printf "%s\n%s\n" $preprintsBib (readFile $bibPath | htmlUnescape) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $softwareBib := "" -}}
+{{- range sort $software "Date" "desc" -}}
+  {{- $bibPath := printf "content/%scite.bib" .File.Dir -}}
+  {{- if fileExists $bibPath -}}
+    {{- $softwareBib = printf "%s\n%s\n" $softwareBib (readFile $bibPath | htmlUnescape) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $thesesBib := "" -}}
+{{- range sort $theses "Date" "desc" -}}
+  {{- $bibPath := printf "content/%scite.bib" .File.Dir -}}
+  {{- if fileExists $bibPath -}}
+    {{- $thesesBib = printf "%s\n%s\n" $thesesBib (readFile $bibPath | htmlUnescape) -}}
+  {{- end -}}
+{{- end -}}
+
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[backend=biber,style=ieee,sorting=ydnt]{biblatex}
+
+\begin{filecontents*}[overwrite]{cv-journals.bib}
+{{ $journalsBib | safeHTML }}
+\end{filecontents*}
+
+\begin{filecontents*}[overwrite]{cv-conferences.bib}
+{{ $conferencesBib | safeHTML }}
+\end{filecontents*}
+
+\begin{filecontents*}[overwrite]{cv-workshops.bib}
+{{ $workshopsBib | safeHTML }}
+\end{filecontents*}
+
+\begin{filecontents*}[overwrite]{cv-preprints.bib}
+{{ $preprintsBib | safeHTML }}
+\end{filecontents*}
+
+\begin{filecontents*}[overwrite]{cv-software.bib}
+{{ $softwareBib | safeHTML }}
+\end{filecontents*}
+
+\begin{filecontents*}[overwrite]{cv-theses.bib}
+{{ $thesesBib | safeHTML }}
+\end{filecontents*}
+
+\newcommand{\CVSection}[1]{\vspace{0.9em}\noindent{\Large\bfseries #1}\par\vspace{0.2em}\hrule\vspace{0.4em}}
+
+\newif\ifresearchfull
+{{- if $flags.research_full_default }}\researchfulltrue{{ else }}\researchfullfalse{{ end }}
+\newif\iftalksinvitedonly
+{{- if $flags.talks_invited_only_default }}\talksinvitedonlytrue{{ else }}\talksinvitedonlyfalse{{ end }}
+\newif\iftalksrenameinvited
+{{- if $flags.talks_rename_to_invited_default }}\talksrenameinvitedtrue{{ else }}\talksrenameinvitedfalse{{ end }}
+\newif\ifshowstudentsupervision
+{{- if $flags.show_student_supervision_default }}\showstudentsupervisiontrue{{ else }}\showstudentsupervisionfalse{{ end }}
+\newif\ifshowprivatefields
+{{- if $flags.show_private_fields_default }}\showprivatefieldstrue{{ else }}\showprivatefieldsfalse{{ end }}
+
+\begin{document}
+\begin{center}
+{\LARGE\textbf{ {{ partial "cv/tex_escape.html" $public.name }} }}\\
+{{ with $public.email }}\href{mailto:{{ . }}}{{ partial "cv/tex_escape.html" . }}{{ end }}{{ with $public.website }} \quad|\quad \url{ {{ . }} }{{ end }}
+\end{center}
+
+\CVSection{Basic Information}
+\begin{itemize}[leftmargin=*]
+{{ with $private.date_of_birth }}\item \textbf{Date of Birth}: {{ partial "cv/tex_escape.html" . }}{{ end }}
+{{ with $private.citizenship }}\item \textbf{Citizenship}: {{ partial "cv/tex_escape.html" . }}{{ end }}
+{{ with $public.office_address }}\item \textbf{Office Address}: {{ partial "cv/tex_escape.html" . }}{{ end }}
+\ifshowprivatefields
+{{ with $private.private_address }}\item \textbf{Private Address}: {{ partial "cv/tex_escape.html" . }}{{ end }}
+{{ with $private.phone }}\item \textbf{Phone}: {{ partial "cv/tex_escape.html" . }}{{ end }}
+\fi
+{{ with $public.email }}\item \textbf{E-Mail}: {{ partial "cv/tex_escape.html" . }}{{ end }}
+{{ with $public.website }}\item \textbf{Website}: \url{ {{ . }} }{{ end }}
+{{ with $public.languages }}\item \textbf{Languages}: {{ delimit . ", " }}{{ end }}
+\end{itemize}
+
+\CVSection{Research Interests}
+\ifresearchfull
+{{ partial "cv/tex_escape.html" $public.research_interests_text }}
+\else
+\begin{itemize}[leftmargin=*]
+{{- range $public.research_interests_bullets }}
+\item {{ partial "cv/tex_escape.html" . }}
+{{- end }}
+\end{itemize}
+\fi
+
+\CVSection{Education}
+\begin{itemize}[leftmargin=*]
+{{- with $author.Params.education }}
+{{- range . }}
+\item \textbf{ {{ partial "cv/tex_escape.html" .year }} }: {{ partial "cv/tex_escape.html" .area }}, {{ partial "cv/tex_escape.html" .institution }}
+{{- end }}
+{{- end }}
+\end{itemize}
+
+\CVSection{Research Experience}
+\begin{itemize}[leftmargin=*]
+{{- with $author.Params.work }}
+{{- range . }}
+  {{- $start := "" -}}
+  {{- $end := "present" -}}
+  {{- with .date_start }}{{ $start = time.AsTime . | time.Format "2006" }}{{ end -}}
+  {{- with .date_end }}{{ $end = time.AsTime . | time.Format "2006" }}{{ end -}}
+\item \textbf{ {{ partial "cv/tex_escape.html" (printf "%s-%s" $start $end) }} }: {{ partial "cv/tex_escape.html" .position }}, {{ partial "cv/tex_escape.html" .company_name }}
+{{- end }}
+{{- end }}
+\end{itemize}
+
+{{- $awards := slice -}}
+{{- $scholarships := slice -}}
+{{- range $author.Params.awards }}
+  {{- $joined := printf "%s %s" (.title | default "") (.awarder | default "") -}}
+  {{- if gt (len (findRE `(?i)scholarship|cusanuswerk` $joined)) 0 -}}
+    {{- $scholarships = $scholarships | append . -}}
+  {{- else -}}
+    {{- $awards = $awards | append . -}}
+  {{- end -}}
+{{- end }}
+
+\CVSection{Awards and Honors}
+\begin{itemize}[leftmargin=*]
+{{- range sort $awards "date" "desc" }}
+\item \textbf{ {{ partial "cv/tex_escape.html" (time.AsTime .date | time.Format "2006") }} }: {{ partial "cv/tex_escape.html" .title }}
+{{- end }}
+\end{itemize}
+
+\CVSection{Scholarships}
+\begin{itemize}[leftmargin=*]
+{{- range sort $scholarships "date" "desc" }}
+\item \textbf{ {{ partial "cv/tex_escape.html" (time.AsTime .date | time.Format "2006") }} }: {{ partial "cv/tex_escape.html" .title }}
+{{- end }}
+\end{itemize}
+
+\CVSection{Publications}
+\textbf{Refereed Journal Publications}
+\begin{refsection}[cv-journals.bib]
+\nocite{*}
+\printbibliography[heading=none]
+\end{refsection}
+
+\textbf{Refereed Conference Publications}
+\begin{refsection}[cv-conferences.bib]
+\nocite{*}
+\printbibliography[heading=none]
+\end{refsection}
+
+\textbf{Refereed Workshop Publications}
+\begin{refsection}[cv-workshops.bib]
+\nocite{*}
+\printbibliography[heading=none]
+\end{refsection}
+
+\textbf{Preprints}
+\begin{refsection}[cv-preprints.bib]
+\nocite{*}
+\printbibliography[heading=none]
+\end{refsection}
+
+\textbf{Software}
+\begin{refsection}[cv-software.bib]
+\nocite{*}
+\printbibliography[heading=none]
+\end{refsection}
+
+\textbf{Theses}
+\begin{refsection}[cv-theses.bib]
+\nocite{*}
+\printbibliography[heading=none]
+\end{refsection}
+
+{{ partial "cv/section_talks.tex" (dict "talksInvitedOnly" $flags.talks_invited_only_default "talksRenameToInvited" $flags.talks_rename_to_invited_default) }}
+
+\CVSection{Teaching Experience}
+\begin{itemize}[leftmargin=*]
+{{- range sort (where site.RegularPages "File.Dir" "in" (slice "teaching/courses/")) "Date" "desc" }}
+\item \textbf{ {{ partial "cv/tex_escape.html" (.Params.semester_label | default (.Date.Format "2006")) }} }: {{ partial "cv/tex_escape.html" .Title }}{{ with .Params.role }} ({{ partial "cv/tex_escape.html" . }}){{ end }}
+{{- end }}
+\end{itemize}
+
+\ifshowstudentsupervision
+\textbf{Student Supervision}
+\begin{itemize}[leftmargin=*]
+{{- range sort (where site.RegularPages "File.Dir" "in" (slice "teaching/projects/")) "Date" "desc" }}
+\item \textbf{ {{ partial "cv/tex_escape.html" (.Params.semester_label | default (.Date.Format "2006")) }} }: {{ partial "cv/tex_escape.html" .Title }}{{ with .Params.project_type }} ({{ partial "cv/tex_escape.html" . }}){{ end }}
+{{- end }}
+\end{itemize}
+\fi
+
+{{ partial "cv/section_service.tex" . }}
+
+\CVSection{References}
+{{ partial "cv/tex_escape.html" ($public.references_text | default "Available upon request") }}
+
+\end{document}

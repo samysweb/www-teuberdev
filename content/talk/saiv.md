@@ -2,6 +2,7 @@
 title:  Provably Safe Neural Network Controllers via Differential Dynamic Logic
 summary: Symposium on AI Verification 2024 (Montreal, Canada)
 date: 2024-07-22
+talk_kind: contributed
 authors:
   - admin
 links:

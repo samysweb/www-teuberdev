@@ -1,0 +1,36 @@
+{{- $talks := where site.RegularPages "Section" "talk" -}}
+{{- $title := "Talks" -}}
+{{- if and .talksInvitedOnly .talksRenameToInvited -}}
+  {{- $title = "Invited Talks" -}}
+{{- end -}}
+\CVSection{ {{ partial "cv/tex_escape.html" $title }} }
+{{- if .talksInvitedOnly }}
+\begin{itemize}[leftmargin=*]
+{{- range sort $talks "Date" "desc" }}
+  {{- $kind := .Params.talk_kind | default "contributed" -}}
+  {{- if eq $kind "invited" }}
+\item \textbf{ {{ partial "cv/tex_escape.html" .Title }} }{{ with .Params.summary }} --- {{ partial "cv/tex_escape.html" . }}{{ end }} ({{ .Date.Format "2006" }})
+  {{- end }}
+{{- end }}
+\end{itemize}
+{{- else }}
+\textbf{Invited Talks}
+\begin{itemize}[leftmargin=*]
+{{- range sort $talks "Date" "desc" }}
+  {{- $kind := .Params.talk_kind | default "contributed" -}}
+  {{- if eq $kind "invited" }}
+\item \textbf{ {{ partial "cv/tex_escape.html" .Title }} }{{ with .Params.summary }} --- {{ partial "cv/tex_escape.html" . }}{{ end }} ({{ .Date.Format "2006" }})
+  {{- end }}
+{{- end }}
+\end{itemize}
+
+\textbf{Contributed Talks}
+\begin{itemize}[leftmargin=*]
+{{- range sort $talks "Date" "desc" }}
+  {{- $kind := .Params.talk_kind | default "contributed" -}}
+  {{- if ne $kind "invited" }}
+\item \textbf{ {{ partial "cv/tex_escape.html" .Title }} }{{ with .Params.summary }} --- {{ partial "cv/tex_escape.html" . }}{{ end }} ({{ .Date.Format "2006" }})
+  {{- end }}
+{{- end }}
+\end{itemize}
+{{- end }}

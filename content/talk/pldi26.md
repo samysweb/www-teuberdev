@@ -2,6 +2,7 @@
 title: "Heterogeneous Dynamic Logic: Provability Modulo Program Theories"
 summary: "PLDI (Boulder, USA)"
 date: 2026-06-19
+talk_kind: contributed
 publishDate: 2026-01-01
 authors:
   - admin

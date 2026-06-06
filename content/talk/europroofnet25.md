@@ -2,6 +2,7 @@
 title: Towards LLM-support for Deductive Verification of Java Programs
 summary: "Workshop: Theorem Proving and Machine Learning in the age of LLMs (Edinburgh, UK)"
 date: 2025-04-07
+talk_kind: contributed
 publishDate: 2025-04-01
 authors:
   - admin

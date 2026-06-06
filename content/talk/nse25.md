@@ -2,6 +2,7 @@
 title: Next Steps in LLM-Supported Java Verification
 summary: "Workshop on Neuro-Symbolic Software Engineering (Ottawa, Canada)"
 date: 2025-05-03
+talk_kind: contributed
 publishDate: 2025-04-01
 authors:
   - admin

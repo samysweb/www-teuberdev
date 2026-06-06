@@ -2,6 +2,7 @@
 title: "Differential Verification of Neural Networks: Theory and Applications"
 summary: "PERR (FLoC, Lisbon, Portugal)"
 date: 2026-07-24
+talk_kind: contributed
 publishDate: 2026-01-01
 authors:
   - admin

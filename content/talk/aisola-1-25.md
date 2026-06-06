@@ -2,6 +2,7 @@
 title: "Replication of the Landscape for LLM-generated Formal Specifications for C Programs"
 summary: AISoLA 2025, Rhodes, Greece
 date: 2025-11-02
+talk_kind: contributed
 publishDate: 2025-07-15
 authors:
   - admin

@@ -2,6 +2,7 @@
 title: "Revisiting Differential Verification: Equivalence Verification with Confidence "
 summary: "TACAS (Hamilton, Canada)"
 date: 2025-05-07
+talk_kind: contributed
 publishDate: 2025-04-01
 authors:
   - admin

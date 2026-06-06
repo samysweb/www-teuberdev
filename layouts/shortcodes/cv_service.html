@@ -1,0 +1,43 @@
+{{- $entries := site.Data.cv.service.entries | default (slice) -}}
+<p>I contributed to reviewing activities in the following roles:</p>
+
+{{- $roleOrder := slice "conference_review" "subreview" "journal_review" -}}
+{{- $roleLabels := dict
+      "conference_review" "Conference Reviews"
+      "subreview"         "Subreviews"
+      "journal_review"    "Journal Reviews" -}}
+
+{{- /* Collect custom roles */}}
+{{- range $entries -}}
+  {{- if and (eq .role "custom") .role_custom -}}
+    {{- if not (in $roleOrder .role_custom) -}}
+      {{- $roleOrder = $roleOrder | append .role_custom -}}
+      {{- $roleLabels = merge $roleLabels (dict .role_custom .role_custom) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Group entries by role */}}
+{{- $groups := dict -}}
+{{- range $entries -}}
+  {{- $key := .role -}}
+  {{- if eq .role "custom" -}}{{- $key = .role_custom | default "custom" -}}{{- end -}}
+  {{- $existing := index $groups $key | default (slice) -}}
+  {{- $groups = merge $groups (dict $key ($existing | append .)) -}}
+{{- end -}}
+
+<ul>
+{{- range $roleKey := $roleOrder -}}
+  {{- $items := index $groups $roleKey -}}
+  {{- if $items -}}
+    {{- $label := index $roleLabels $roleKey | default $roleKey -}}
+    {{- $parts := slice -}}
+    {{- range $items -}}
+      {{- $entry := printf "%s (%s)" .venue .year -}}
+      {{- with .note -}}{{- $entry = printf "%s, %s" $entry . -}}{{- end -}}
+      {{- $parts = $parts | append $entry -}}
+    {{- end }}
+  <li><strong>{{ $label }}:</strong> {{ delimit $parts "; " }}</li>
+  {{- end -}}
+{{- end }}
+</ul>

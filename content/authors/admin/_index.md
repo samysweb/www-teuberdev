@@ -180,10 +180,10 @@ awards:
   url: https://web.archive.org/web/20190613062743/https://openlab.cern/lightning-talks-bring-2018-cern-openlab-summer-student-programme-close
   #url: https://openlab.cern/index.php/lightning-talks-bring-2018-cern-openlab-summer-student-programme-close
 - date: "2017-01-01"
-  summary: "Awarded by the German Catholic Bishops’ Conference and funded by the German Federal Ministry of Science and Research as **one of thirteen government funded scholarship foundations for academic excellence**"
+  summary: "Awarded by the German Catholic Bishops’ Conference and funded by the German Federal Ministry of Science and Research as one of thirteen government funded scholarship foundations for academic excellence"
   awarder: Cusanuswerk e.V.
   organization_url: https://www.cusanuswerk.de
-  title: 'Scholarship holder at Cusanuswerk e.V.'
+  title: 'Scholarship holder at Cusanuswerk e.V. (2017-2022)'
   url: ""
 - date: "2023-07-28"
   awarder: Department of Informatics, KIT

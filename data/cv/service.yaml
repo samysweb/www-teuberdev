@@ -1,0 +1,53 @@
+entries:
+  - role: conference_review
+    venue: "NeurIPS"
+    year: "2025"
+  - role: conference_review
+    venue: "AAAI"
+    year: "2025"
+  - role: conference_review
+    venue: "ICML"
+    year: "2025"
+  - role: conference_review
+    venue: "AISTATS"
+    year: "2025"
+  - role: conference_review
+    venue: "AAAI SRRAI Track"
+    year: "2024"
+  - role: conference_review
+    venue: "NeurIPS"
+    year: "2024"
+
+  - role: subreview
+    venue: "FM"
+    year: "2026"
+  - role: subreview
+    venue: "POPL"
+    year: "2025"
+  - role: subreview
+    venue: "LICS"
+    year: "2025"
+  - role: subreview
+    venue: "FM"
+    year: "2024"
+  - role: subreview
+    venue: "ICTAC"
+    year: "2024"
+  - role: subreview
+    venue: "iFM"
+    year: "2023"
+  - role: subreview
+    venue: "LICS"
+    year: "2023"
+
+  - role: journal_review
+    venue: "Science of Computer Programming"
+    year: "2024/2025"
+
+# Optional extension point for additional categories.
+# Use role: custom together with role_custom.
+# - role: custom
+#   role_custom: "Program Committee"
+#   venue: "Example Conference"
+#   year: "2026"
+#   note: "Track XYZ"
