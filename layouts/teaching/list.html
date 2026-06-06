@@ -1,0 +1,66 @@
+{{ define "main" }}
+
+<div class="max-w-prose mx-auto flex justify-center">
+  <article class="prose prose-slate lg:prose-xl dark:prose-invert">
+    <h1 class="lg:text-6xl">{{ .Title }}</h1>
+    {{ .Content }}
+
+    {{/* ---- Courses Table ---- */}}
+    {{ $coursesSection := .Site.GetPage "section" "teaching/courses" }}
+    {{ if $coursesSection }}
+    <h2>Courses</h2>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align:center">Semester</th>
+          <th>Course</th>
+          <th style="text-align:center">Role</th>
+          <th style="text-align:center">Materials</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $coursesSection.Pages.ByDate.Reverse }}
+        <tr>
+          <td style="text-align:center; white-space:nowrap">{{ .Params.semester_label }}</td>
+          <td>
+            {{ if .Params.course_url }}<a href="{{ .Params.course_url }}">{{ .Title }}</a>{{ else }}{{ .Title }}{{ end }}
+          </td>
+          <td style="text-align:center">{{ .Params.role }}</td>
+          <td style="text-align:center">
+            {{ if .Params.materials_url }}<a href="{{ .Params.materials_url }}">{{ .Params.materials_text }}</a>{{ else if .Params.materials_text }}{{ .Params.materials_text }}{{ end }}
+          </td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+    {{ end }}
+
+    {{/* ---- Advised Student Projects Table ---- */}}
+    {{ $projectsSection := .Site.GetPage "section" "teaching/projects" }}
+    {{ if $projectsSection }}
+    <h2>Advised Student Projects</h2>
+    <p>I have advised student research projects/theses on the following topics:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align:center">Semester</th>
+          <th style="text-align:center">Topic</th>
+          <th style="text-align:center">Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $projectsSection.Pages.ByDate.Reverse }}
+        <tr>
+          <td style="text-align:center; white-space:nowrap">{{ .Params.semester_label }}</td>
+          <td style="text-align:center">{{ .Title }}</td>
+          <td style="text-align:center; white-space:nowrap">{{ .Params.project_type }}</td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+    {{ end }}
+
+  </article>
+</div>
+
+{{ end }}
