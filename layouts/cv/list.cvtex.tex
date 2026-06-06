@@ -1,8 +1,19 @@
+\newif\ifresearchfull
+\newif\iftalksinvitedonly
+\newif\ifshowstudentsupervision
+\newif\ifshowprivatefields
+
+\researchfulltrue
+\talksinvitedonlytrue
+\showstudentsupervisiontrue
+\showprivatefieldstrue
+
 {{- $public := site.Data.cv.public -}}
 {{- $private := site.Data.cv.private -}}
 {{- $author := site.GetPage "/authors/admin" -}}
 {{- $flags := $public.tex_flags -}}
-{{- $publications := where site.RegularPages "Section" "publication" -}}
+{{- $publicationsAll := where site.RegularPages "Section" "publication" -}}
+{{- $publications := where $publicationsAll "Params.cv_exclude" "ne" true -}}
 {{- $journals := where $publications "Params.publication_types" "intersect" (slice "paper-journal" "article-journal" "journal") -}}
 {{- $conferences := where $publications "Params.publication_types" "intersect" (slice "paper-conference" "conference") -}}
 {{- $workshops := where $publications "Params.publication_types" "intersect" (slice "paper-workshop" "Workshop Paper" "workshop-paper" "workshop") -}}
@@ -61,10 +72,47 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[a4paper,left=1.8cm,right=1.8cm,top=1.5cm,bottom=1.6cm]{geometry}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage[backend=biber,style=ieee,sorting=ydnt]{biblatex}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[p,osf,swashQ]{cochineal}
+\usepackage[medium,bold]{cabin}
+\usepackage[varqu,varl,scale=0.9]{zi4}
+\usepackage[backend=biber,sorting=ydnt, maxbibnames=99]{biblatex}
+
+\usepackage{xpatch}% or use http://tex.stackexchange.com/a/40705
+
+\DeclareFieldFormat{eventtitleaddon}{\textbf{#1}}
+\DeclareFieldFormat[article]{number}{\textbf{#1}}
+\DeclareFieldFormat[article]{journal}{\textbf{#1}}
+\DeclareFieldFormat[article]{journaltitle}{\textbf{#1}}
+\DeclareFieldFormat{labelnumberwidth}{#1.}
+
+\makeatletter
+\newbibmacro*{name:bold}[2]{%
+  \edef\blx@tmp@name{\expandonce#1, \expandonce#2}%
+  \def\do##1{\ifdefstring{\blx@tmp@name}{##1}{\bfseries\listbreak}{}}%
+  \dolistloop{\boldnames}}
+\newcommand*{\boldnames}{}
+\makeatother
+
+\xpretobibmacro{name:family}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:family-given}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:delim}{\begingroup\normalfont}{}{}
+
+\xapptobibmacro{name:family}{\endgroup}{}{}
+\xapptobibmacro{name:given-family}{\endgroup}{}{}
+\xapptobibmacro{name:family-given}{\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}
+
+% List your own name variants that are to be highlighted
+\forcsvlist{\listadd\boldnames}
+{ {Teuber, Samuel}, {Samuel Teuber} }
+
+\definecolor{CVHeading}{HTML}{145A5A}
+\definecolor{CVRule}{HTML}{5B8C85}
 
 \begin{filecontents*}[overwrite]{cv-journals.bib}
 {{ $journalsBib | safeHTML }}
@@ -90,38 +138,66 @@
 {{ $thesesBib | safeHTML }}
 \end{filecontents*}
 
-\newcommand{\CVSection}[1]{\vspace{0.9em}\noindent{\Large\bfseries #1}\par\vspace{0.2em}\hrule\vspace{0.4em}}
-
-\newif\ifresearchfull
-{{- if $flags.research_full_default }}\researchfulltrue{{ else }}\researchfullfalse{{ end }}
-\newif\iftalksinvitedonly
-{{- if $flags.talks_invited_only_default }}\talksinvitedonlytrue{{ else }}\talksinvitedonlyfalse{{ end }}
-\newif\iftalksrenameinvited
-{{- if $flags.talks_rename_to_invited_default }}\talksrenameinvitedtrue{{ else }}\talksrenameinvitedfalse{{ end }}
-\newif\ifshowstudentsupervision
-{{- if $flags.show_student_supervision_default }}\showstudentsupervisiontrue{{ else }}\showstudentsupervisionfalse{{ end }}
-\newif\ifshowprivatefields
-{{- if $flags.show_private_fields_default }}\showprivatefieldstrue{{ else }}\showprivatefieldsfalse{{ end }}
+\newcommand{\CVSection}[1]{\vspace{0.85em}\noindent{\large\bfseries\sffamily\color{CVHeading}\textsc{#1}}\par\vspace{0.15em}{\color{CVRule}\hrule}\vspace{0.35em}}
+\newcommand{\CVSubsection}[1]{\vspace{0.35em}\noindent{\bfseries\sffamily #1}\par\vspace{0.2em}}
+\setlist[itemize]{leftmargin=1.2em,itemsep=0.22em,topsep=0.2em,parsep=0pt,label={\color{CVRule}$\diamond$}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.15em}
 
 \begin{document}
-\begin{center}
-{\LARGE\textbf{ {{ partial "cv/tex_escape.html" $public.name }} }}\\
-{{ with $public.email }}\href{mailto:{{ . }}}{{ partial "cv/tex_escape.html" . }}{{ end }}{{ with $public.website }} \quad|\quad \url{ {{ . }} }{{ end }}
-\end{center}
-
-\CVSection{Basic Information}
-\begin{itemize}[leftmargin=*]
-{{ with $private.date_of_birth }}\item \textbf{Date of Birth}: {{ partial "cv/tex_escape.html" . }}{{ end }}
-{{ with $private.citizenship }}\item \textbf{Citizenship}: {{ partial "cv/tex_escape.html" . }}{{ end }}
-{{ with $public.office_address }}\item \textbf{Office Address}: {{ partial "cv/tex_escape.html" . }}{{ end }}
-\ifshowprivatefields
-{{ with $private.private_address }}\item \textbf{Private Address}: {{ partial "cv/tex_escape.html" . }}{{ end }}
-{{ with $private.phone }}\item \textbf{Phone}: {{ partial "cv/tex_escape.html" . }}{{ end }}
+{\LARGE\bfseries\sffamily {{ partial "cv/tex_escape.html" $public.name }}}\\[-0.1em]
+{{ with $public.email }}%
+\href{mailto:{{ . }}}%
+{{ partial "cv/tex_escape.html" . }}%
+{{ end }}%
+{{ with $public.website }}%
+\hspace{0.8em}{\color{CVRule}$\diamond$}\hspace{0.8em}%
+\url{ {{ . }} }%
+{{ end }}%
+\ifshowprivatefields%
+{{ with $private.phone }}%
+\hspace{0.8em}{\color{CVRule}$\diamond$}\hspace{0.8em}%
+{{ partial "cv/tex_escape.html" . }}%
+{{ end }}%
 \fi
-{{ with $public.email }}\item \textbf{E-Mail}: {{ partial "cv/tex_escape.html" . }}{{ end }}
-{{ with $public.website }}\item \textbf{Website}: \url{ {{ . }} }{{ end }}
-{{ with $public.languages }}\item \textbf{Languages}: {{ delimit . ", " }}{{ end }}
-\end{itemize}
+
+\vspace{0.2em}
+\noindent
+\begin{minipage}[t]{0.49\textwidth}\vspace*{0pt}
+{{ with $public.office_address }}
+  \textbf{Office Address}\\[-0.1em]
+{{ partial "cv/tex_escape.html" . }}
+\par\vspace{0.3em}
+{{ end }}
+\ifshowprivatefields
+{{ with $private.private_address }}
+  \textbf{Private Address}\\[-0.1em]
+{{ partial "cv/tex_escape.html" . }}
+\par\vspace{0.25em}
+{{ end }}
+\fi
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.49\textwidth}\vspace*{0pt}
+\begin{tabular}{@{}p{0.38\linewidth}p{0.58\linewidth}@{}}
+{{ with $private.date_of_birth }}
+  {{- $dob := time.AsTime . -}}
+  {{- $day := int ($dob | time.Format "2") -}}
+  {{- $mod100 := mod $day 100 -}}
+  {{- $suffix := "th" -}}
+  {{- if and (ne $mod100 11) (eq (mod $day 10) 1) -}}{{- $suffix = "st" -}}{{- end -}}
+  {{- if and (ne $mod100 12) (eq (mod $day 10) 2) -}}{{- $suffix = "nd" -}}{{- end -}}
+  {{- if and (ne $mod100 13) (eq (mod $day 10) 3) -}}{{- $suffix = "rd" -}}{{- end -}}
+  	\textbf{Date of Birth:} & {{ partial "cv/tex_escape.html" (printf "%d%s of %s" $day $suffix ($dob | time.Format "January 2006")) }}\\
+{{ end }}
+{{ with $private.citizenship }}
+  \textbf{Citizenship:} & {{ partial "cv/tex_escape.html" . }}\\
+{{ end }}
+{{ with $public.languages }}
+  \textbf{Languages:} & {{ partial "cv/tex_escape.html" (delimit . ", ") }}\\
+{{ end }}
+\end{tabular}
+\end{minipage}
 
 \CVSection{Research Interests}
 \ifresearchfull
@@ -138,12 +214,31 @@
 \begin{itemize}[leftmargin=*]
 {{- with $author.Params.education }}
 {{- range . }}
-\item \textbf{ {{ partial "cv/tex_escape.html" .year }} }: {{ partial "cv/tex_escape.html" .area }}, {{ partial "cv/tex_escape.html" .institution }}
+\item \textbf{ {{ partial "cv/tex_escape.html" .year }} }: \textbf{ {{ partial "cv/tex_escape.html" .area }} } --- {{ partial "cv/tex_escape.html" .institution }}
+{{- with .subject }}\\
+\emph{Subject:} {{ partial "cv/tex_escape.html" . }}
+{{- end }}
+{{- with .grade }}\\
+\emph{Grade:} {{ partial "cv/tex_escape.html" . }}
+{{- end }}
+{{- with .thesis }}\\
+\emph{Thesis:} {{ partial "cv/tex_escape.html" . }}
+{{- end }}
+{{- with .note }} ---
+{{ partial "cv/tex_escape.html" . }}
+{{- end }}
+{{- with .referees }}
+  {{- $refs := slice -}}
+  {{- range . -}}
+    {{- $refs = $refs | append (partial "cv/tex_escape.html" .) -}}
+  {{- end -}}\\
+\emph{Referees:} {{ delimit $refs "; " }}
+{{- end }}
 {{- end }}
 {{- end }}
 \end{itemize}
 
-\CVSection{Research Experience}
+\CVSection{Experience}
 \begin{itemize}[leftmargin=*]
 {{- with $author.Params.work }}
 {{- range . }}
@@ -151,7 +246,11 @@
   {{- $end := "present" -}}
   {{- with .date_start }}{{ $start = time.AsTime . | time.Format "2006" }}{{ end -}}
   {{- with .date_end }}{{ $end = time.AsTime . | time.Format "2006" }}{{ end -}}
-\item \textbf{ {{ partial "cv/tex_escape.html" (printf "%s-%s" $start $end) }} }: {{ partial "cv/tex_escape.html" .position }}, {{ partial "cv/tex_escape.html" .company_name }}
+  {{- $yearsLabel := printf "%s-%s" $start $end -}}
+  {{- if and (ne $start "") (eq $start $end) -}}
+    {{- $yearsLabel = $start -}}
+  {{- end -}}
+\item \textbf{ {{ partial "cv/tex_escape.html" $yearsLabel }} }: {{ partial "cv/tex_escape.html" .position }}, {{ partial "cv/tex_escape.html" .company_name }}
 {{- end }}
 {{- end }}
 \end{itemize}
@@ -170,49 +269,65 @@
 \CVSection{Awards and Honors}
 \begin{itemize}[leftmargin=*]
 {{- range sort $awards "date" "desc" }}
-\item \textbf{ {{ partial "cv/tex_escape.html" (time.AsTime .date | time.Format "2006") }} }: {{ partial "cv/tex_escape.html" .title }}
+  {{- $dateLabel := "" -}}
+  {{- if .date_display -}}
+    {{- $dateLabel = .date_display -}}
+  {{- else if .date -}}
+    {{- $dateLabel = (time.AsTime .date | time.Format "2006") -}}
+  {{- else -}}
+    {{- $dateLabel = "present" -}}
+  {{- end -}}
+\item \textbf{ {{ partial "cv/tex_escape.html" $dateLabel }} }: {{ partial "cv/tex_escape.html" .title }}
 {{- end }}
 \end{itemize}
 
 \CVSection{Scholarships}
 \begin{itemize}[leftmargin=*]
 {{- range sort $scholarships "date" "desc" }}
-\item \textbf{ {{ partial "cv/tex_escape.html" (time.AsTime .date | time.Format "2006") }} }: {{ partial "cv/tex_escape.html" .title }}
+  {{- $dateLabel := "" -}}
+  {{- if .date_display -}}
+    {{- $dateLabel = .date_display -}}
+  {{- else if .date -}}
+    {{- $dateLabel = (time.AsTime .date | time.Format "2006") -}}
+  {{- else -}}
+    {{- $dateLabel = "present" -}}
+  {{- end -}}
+\item \textbf{ {{ partial "cv/tex_escape.html" $dateLabel }} }: {{ partial "cv/tex_escape.html" .title }}
 {{- end }}
 \end{itemize}
 
 \CVSection{Publications}
-\textbf{Refereed Journal Publications}
+\CVSubsection{Refereed Journal Publications}
 \begin{refsection}[cv-journals.bib]
 \nocite{*}
 \printbibliography[heading=none]
 \end{refsection}
 
-\textbf{Refereed Conference Publications}
+\CVSubsection{Refereed Conference Publications}
 \begin{refsection}[cv-conferences.bib]
 \nocite{*}
 \printbibliography[heading=none]
 \end{refsection}
 
-\textbf{Refereed Workshop Publications}
+\CVSubsection{Refereed Workshop Publications}
 \begin{refsection}[cv-workshops.bib]
 \nocite{*}
 \printbibliography[heading=none]
 \end{refsection}
 
-\textbf{Preprints}
+\CVSubsection{Preprints}
 \begin{refsection}[cv-preprints.bib]
 \nocite{*}
 \printbibliography[heading=none]
 \end{refsection}
 
-\textbf{Software}
+\CVSubsection{Software}
 \begin{refsection}[cv-software.bib]
 \nocite{*}
 \printbibliography[heading=none]
 \end{refsection}
 
-\textbf{Theses}
+\CVSubsection{Theses}
 \begin{refsection}[cv-theses.bib]
 \nocite{*}
 \printbibliography[heading=none]
@@ -228,10 +343,10 @@
 \end{itemize}
 
 \ifshowstudentsupervision
-\textbf{Student Supervision}
+\CVSubsection{Student Supervision}
 \begin{itemize}[leftmargin=*]
 {{- range sort (where site.RegularPages "File.Dir" "in" (slice "teaching/projects/")) "Date" "desc" }}
-\item \textbf{ {{ partial "cv/tex_escape.html" (.Params.semester_label | default (.Date.Format "2006")) }} }: {{ partial "cv/tex_escape.html" .Title }}{{ with .Params.project_type }} ({{ partial "cv/tex_escape.html" . }}){{ end }}
+\item \textbf{ {{ partial "cv/tex_escape.html" (.Params.semester_label | default (.Date.Format "2006")) }} }: {{ with .Params.project_type }} {{ partial "cv/tex_escape.html" . }}{{ end }} --- {{ partial "cv/tex_escape.html" .Title }}
 {{- end }}
 \end{itemize}
 \fi

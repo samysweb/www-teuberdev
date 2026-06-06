@@ -9,27 +9,27 @@
 {{- range sort $talks "Date" "desc" }}
   {{- $kind := .Params.talk_kind | default "contributed" -}}
   {{- if eq $kind "invited" }}
-\item \textbf{ {{ partial "cv/tex_escape.html" .Title }} }{{ with .Params.summary }} --- {{ partial "cv/tex_escape.html" . }}{{ end }} ({{ .Date.Format "2006" }})
+\item \textbf{ {{ .Date.Format "2006" }}}:\textbf{ {{ partial "cv/tex_escape.html" .Title }} }{{ with .Params.summary }} --- {{ partial "cv/tex_escape.html" . }}{{ end }} --- {{ .Date.Format "2006" }}
   {{- end }}
 {{- end }}
 \end{itemize}
 {{- else }}
-\textbf{Invited Talks}
+\CVSubsection{Invited Talks}
 \begin{itemize}[leftmargin=*]
 {{- range sort $talks "Date" "desc" }}
   {{- $kind := .Params.talk_kind | default "contributed" -}}
   {{- if eq $kind "invited" }}
-\item \textbf{ {{ partial "cv/tex_escape.html" .Title }} }{{ with .Params.summary }} --- {{ partial "cv/tex_escape.html" . }}{{ end }} ({{ .Date.Format "2006" }})
+\item \textbf{ {{ .Date.Format "2006" }}}:\textbf{ {{ partial "cv/tex_escape.html" .Title }} }{{ with .Params.summary }} --- {{ partial "cv/tex_escape.html" . }}{{ end }}
   {{- end }}
 {{- end }}
 \end{itemize}
 
-\textbf{Contributed Talks}
+\CVSubsection{Contributed Talks}
 \begin{itemize}[leftmargin=*]
 {{- range sort $talks "Date" "desc" }}
   {{- $kind := .Params.talk_kind | default "contributed" -}}
-  {{- if ne $kind "invited" }}
-\item \textbf{ {{ partial "cv/tex_escape.html" .Title }} }{{ with .Params.summary }} --- {{ partial "cv/tex_escape.html" . }}{{ end }} ({{ .Date.Format "2006" }})
+  {{- if eq $kind "contributed" }}
+\item \textbf{ {{ .Date.Format "2006" }}}:\textbf{ {{ partial "cv/tex_escape.html" .Title }} }{{ with .Params.summary }} --- {{ partial "cv/tex_escape.html" . }}{{ end }}
   {{- end }}
 {{- end }}
 \end{itemize}

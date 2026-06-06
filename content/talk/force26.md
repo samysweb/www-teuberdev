@@ -1,6 +1,6 @@
 ---
 title: "Heterogeneous Dynamic Logic: Provability Modulo Program Theories"
-summary: "FORCE (FLoC, Lisbon, Portugal)"
+summary: "Formal Reasoning for Compositional Systems Engineering (FLoC, Lisbon, Portugal)"
 date: 2026-07-25
 talk_kind: contributed
 publishDate: 2026-01-01

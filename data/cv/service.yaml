@@ -20,16 +20,13 @@ entries:
 
   - role: subreview
     venue: "FM"
-    year: "2026"
+    year: "2026,2024"
   - role: subreview
     venue: "POPL"
     year: "2025"
   - role: subreview
     venue: "LICS"
     year: "2025"
-  - role: subreview
-    venue: "FM"
-    year: "2024"
   - role: subreview
     venue: "ICTAC"
     year: "2024"

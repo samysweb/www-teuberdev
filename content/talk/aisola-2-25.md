@@ -1,8 +1,8 @@
 ---
 title: "Formally Verified LLM Program Synthesis for Solidity Smart Contracts"
-summary: AISoLA 2025, Rhodes, Greece
+summary: AISoLA, Rhodes, Greece
 date: 2025-11-05
-talk_kind: contributed
+talk_kind: conference
 publishDate: 2025-07-15
 authors:
   - admin

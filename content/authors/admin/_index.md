@@ -29,33 +29,47 @@ education:
     institution: Karlsruhe Institute of Technology
     year: 2022-present
   - area: Master's Thesis via interACT
-    institution: Logical Systems Lab, Carnegie Mellon Univeristy
+    institution: Logical Systems Lab, Carnegie Mellon University
     year: 2022
     date_start: '2022-01-07'
     date_end: '2022-06-30'
+    thesis: "Transfer of Safety Guarantees from Differential Dynamic Logic Proofs to Neural Network based Controller Systems"
+    referees:
+      - "Prof. André Platzer (CMU)"
+      - "Prof. Carsten Sinz (KIT)"
+    note: "Awarded with KIT Informatic's Best Thesis Award"
   - area: M.Sc. in Computer Science
     institution: Karlsruhe Institute of Technology
     year: 2020-2022
     date_start: '2020-10-01'
     date_end: '2022-09-14'
+    subject: "Computer Science"
+    grade: "1.0 (very good; with distinction)"
   - area: ERASMUS Exchange
     institution: ENSIMAG, Grenoble
     year: 2017-2018
     date_start: '2017-09-01'
     date_end: '2018-05-30'
+    subject: "Ingénierie des Systèmes d’Information"
   - area: B.Sc. in Computer Science
     institution: Karlsruhe Institute of Technology
     year: 2015-2020
     date_start: '2015-10-01'
     date_end: '2020-09-30'
+    subject: "Computer Science"
+    grade: "1.5 (very good)"
+    thesis: "Solving difficult SMT instances using abstractions and incremental SMT solving"
+    referees:
+      - "Prof. Carsten Sinz (KIT)"
   - area: A Levels (Abitur)
     institution: Oskar-von-Miller-Gymnasium, München
     year: 2015
     date_end: '2015-07-31'
+    grade: "1.2 (very good)"
 
 work:
-  - position: PhD Candidate
-    company_name: KASTEL / ITI Beckert, KIT
+  - position: Researcher
+    company_name: KASTEL Beckert, KIT
     company_url: 'https://formal.kastel.kit.edu'
     date_start: '2022-09-15'
 
@@ -180,15 +194,16 @@ awards:
   url: https://web.archive.org/web/20190613062743/https://openlab.cern/lightning-talks-bring-2018-cern-openlab-summer-student-programme-close
   #url: https://openlab.cern/index.php/lightning-talks-bring-2018-cern-openlab-summer-student-programme-close
 - date: "2017-01-01"
+  date_display: "2017-2022"
   summary: "Awarded by the German Catholic Bishops’ Conference and funded by the German Federal Ministry of Science and Research as one of thirteen government funded scholarship foundations for academic excellence"
   awarder: Cusanuswerk e.V.
   organization_url: https://www.cusanuswerk.de
-  title: 'Scholarship holder at Cusanuswerk e.V. (2017-2022)'
+  title: 'Scholarship holder at Cusanuswerk e.V.'
   url: ""
 - date: "2023-07-28"
   awarder: Department of Informatics, KIT
   organization_url: https://www.informatik.kit.edu
-  title: Best Master's Thesis in 2022/2023
+  title: Best Master's Thesis Award 2022/2023 by the KIT Informatics Department
   #description: "My thesis concerned with the transfer of safety guarantees for Cyber-Physical Systems from differential dynamic logic to neural network controllers."
   url: https://www.informatik.kit.edu/7054_13223.php#gallery-12
 

@@ -1,6 +1,6 @@
 ---
 title: "Differential Verification of Neural Networks: Theory and Applications"
-summary: "PERR (FLoC, Lisbon, Portugal)"
+summary: "Workshop on Program Equivalence and Relational Reasoning (FLoC, Lisbon, Portugal)"
 date: 2026-07-24
 talk_kind: contributed
 publishDate: 2026-01-01

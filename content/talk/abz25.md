@@ -2,7 +2,7 @@
 title: "Verification of Autonomous Neural Car Control with KeYmaera X"
 summary: "ABZ (Düsseldorf, Germany)"
 date: 2025-06-12
-talk_kind: contributed
+talk_kind: conference
 publishDate: 2025-06-12
 authors:
   - admin
