@@ -169,6 +169,8 @@ profiles:
   link: 'mailto:teuber@kit.edu'
 #- icon: brands/twitter
 #  link: https://twitter.com/teuber_dev
+- icon: cv
+  link: /cv.pdf
 - icon: bsky
   link: https://bsky.app/profile/teuber.bsky.social
 # - icon: graduation-cap  # Alternatively, use `google-scholar` icon from `ai` icon pack
