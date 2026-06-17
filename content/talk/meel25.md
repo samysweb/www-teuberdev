@@ -1,6 +1,6 @@
 ---
 title: "Provable Guarantees for Neural Networks"
-summary: MeelGroup (Online)
+summary: Meel Group (Online)
 date: 2025-07-16
 talk_kind: invited
 publishDate: 2025-07-15

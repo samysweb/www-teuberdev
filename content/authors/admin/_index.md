@@ -28,12 +28,14 @@ education:
   - area: PhD Candidate in Computer Science
     institution: Karlsruhe Institute of Technology
     year: 2022-present
+    thesis: "Provable Correctness of AI-based Heterogeneous Systems"
+    advisor: "Prof. Bernhard Beckert (KIT)"
   - area: Master's Thesis via interACT
     institution: Logical Systems Lab, Carnegie Mellon University
     year: 2022
     date_start: '2022-01-07'
     date_end: '2022-06-30'
-    thesis: "Transfer of Safety Guarantees from Differential Dynamic Logic Proofs to Neural Network based Controller Systems"
+    thesis: "Transfer of Safety Guarantees from Differential Dynamic Logic Proofs to Neural Network-based Controller Systems"
     referees:
       - "Prof. André Platzer (CMU)"
       - "Prof. Carsten Sinz (KIT)"

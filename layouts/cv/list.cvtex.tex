@@ -224,6 +224,9 @@
 {{- with .thesis }}\\
 \emph{Thesis:} {{ partial "cv/tex_escape.html" . }}
 {{- end }}
+{{- with .advisor }}\\
+\emph{Advisor:} {{ partial "cv/tex_escape.html" . }}
+{{- end }}
 {{- with .note }} ---
 {{ partial "cv/tex_escape.html" . }}
 {{- end }}
@@ -315,23 +318,23 @@
 \printbibliography[heading=none]
 \end{refsection}
 
-\CVSubsection{Preprints}
-\begin{refsection}[cv-preprints.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
+% \CVSubsection{Preprints}
+% \begin{refsection}[cv-preprints.bib]
+% \nocite{*}
+% \printbibliography[heading=none]
+% \end{refsection}
 
-\CVSubsection{Software}
-\begin{refsection}[cv-software.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
+% \CVSubsection{Software}
+% \begin{refsection}[cv-software.bib]
+% \nocite{*}
+% \printbibliography[heading=none]
+% \end{refsection}
 
-\CVSubsection{Theses}
-\begin{refsection}[cv-theses.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
+% \CVSubsection{Theses}
+% \begin{refsection}[cv-theses.bib]
+% \nocite{*}
+% \printbibliography[heading=none]
+% \end{refsection}
 
 {{ partial "cv/section_talks.tex" (dict "talksInvitedOnly" $flags.talks_invited_only_default "talksRenameToInvited" $flags.talks_rename_to_invited_default) }}
 
