@@ -23,11 +23,12 @@ date: "2026-05-05T00:00:00Z"
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["preprint"]
+publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-# publication: 
-# publication_short: 
+publication: Proceedings of the ACM on Programming Languages (ICFP)
+publication_short: In ICFP 2026
+venue_label: "ICFP'26"
 
 abstract: |2-
   Formal verification of neuro-symbolic cyber-physical systems, such as drones, medical devices and robots, is complicated. Neural components must be trained to be optimal with respect to the available data as well as the safety specifications, and then verified using specialised solvers. Symbolic models of the "cyber" and "physical" behaviour of the system must be constructed and verified in interactive theorem provers (ITPs), often requiring mature mathematical libraries to reason about the interplay of discrete and continuous dynamics, preferably obtaining infinite time-horizon guarantees. Finally, the results of the two already challenging verification tasks need to be integrated into a single proof in a coherent and consistent way, whilst preserving deployability of the resulting model.
