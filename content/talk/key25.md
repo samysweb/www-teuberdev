@@ -1,7 +1,8 @@
 ---
 title: Dynamic Logic à la Locale
-summary: KeY Symposium 2025 (Manigod, France)
+summary: KeY Symposium (Manigod, France)
 date: 2025-08-06
+talk_kind: contributed
 authors:
   - admin
 links:

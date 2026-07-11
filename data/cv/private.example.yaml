@@ -1,0 +1,13 @@
+# Copy this file to data/cv/private.yaml and fill with your private details.
+# This file is intentionally commit-safe. The real private.yaml is gitignored.
+
+# Optional CV metadata (private/sensitive)
+date_of_birth: "YYYY-MM-DD"
+citizenship: ""
+private_address: ""
+phone: ""
+
+optional_metadata:
+  pronouns: ""
+  office_room: ""
+  notes: ""

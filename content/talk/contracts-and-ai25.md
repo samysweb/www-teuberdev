@@ -2,6 +2,7 @@
 title: "Replication of the Landscape for LLM-generated Formal Specifications for C Programs"
 summary: Contract Languages Seminar (Online)
 date: 2025-12-10
+talk_kind: contributed
 publishDate: 2025-07-15
 authors:
   - admin

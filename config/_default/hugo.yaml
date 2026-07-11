@@ -32,10 +32,19 @@ mediaTypes:
   application/manifest+json:
     suffixes:
       - webmanifest
+  text/x-tex:
+    suffixes:
+      - tex
 outputFormats:
   WebAppManifest:
     mediaType: application/manifest+json
     rel: manifest
+  CVTex:
+    mediaType: text/x-tex
+    isPlainText: true
+    baseName: cv
+    rel: alternate
+    notAlternative: true
 markup:
   defaultMarkdownHandler: goldmark
   goldmark:

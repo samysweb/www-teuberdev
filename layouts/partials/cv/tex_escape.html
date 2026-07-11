@@ -1,0 +1,12 @@
+{{- $s := printf "%v" . | htmlUnescape -}}
+{{- $s = replace $s "\\" "\\textbackslash{}" -}}
+{{- $s = replace $s "&" "\\&" -}}
+{{- $s = replace $s "%" "\\%" -}}
+{{- $s = replace $s "$" "\\$" -}}
+{{- $s = replace $s "#" "\\#" -}}
+{{- $s = replace $s "_" "\\_" -}}
+{{- $s = replace $s "{" "\\{" -}}
+{{- $s = replace $s "}" "\\}" -}}
+{{- $s = replace $s "~" "\\textasciitilde{}" -}}
+{{- $s = replace $s "^" "\\textasciicircum{}" -}}
+{{- $s | safeHTML -}}

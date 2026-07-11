@@ -2,6 +2,7 @@
 title: "Of Good Demons and Bad Angels: Guaranteeing Safe Neural Control under Finite Precision"
 summary: ANSR Reading Group, Berkeley, California, US (Online)
 date: 2025-10-20
+talk_kind: invited
 publishDate: 2025-07-15
 authors:
   - admin

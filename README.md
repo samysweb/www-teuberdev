@@ -30,3 +30,77 @@ To help us develop this template and software sustainably under the MIT license,
 <!--
 [![Analytics](https://ga-beacon.appspot.com/UA-78646709-2/academic-kickstart/readme?pixel)](https://github.com/igrigorik/ga-beacon)
 -->
+
+## CV LaTeX Frontend (Hugo)
+
+This repository now contains a second frontend that renders a LaTeX CV from the same website data.
+
+### Output target
+
+- CV entry point: `content/cv/_index.md`
+- Output format: `CVTex` (configured in `config/_default/hugo.yaml`)
+- Main template: `layouts/cv/list.cvtex.tex`
+
+### CV data files
+
+- Public CV data: `data/cv/public.yaml`
+- Service data: `data/cv/service.yaml`
+- Private local CV data template: `data/cv/private.example.yaml`
+- Private local CV data (ignored by git): `data/cv/private.yaml`
+
+Create your local private file like this:
+
+```bash
+cp data/cv/private.example.yaml data/cv/private.yaml
+```
+
+### TeX flags (in generated `cv.tex`)
+
+The generated file defines TeX booleans with `\newif` and defaults from `data/cv/public.yaml`:
+
+- `\ifresearchfull`
+- `\iftalksinvitedonly`
+- `\ifshowstudentsupervision`
+- `\ifshowprivatefields`
+
+You can flip them directly in the generated `.tex` before LaTeX compilation.
+
+### Talks schema
+
+All talks under `content/talk/*.md` now include:
+
+```yaml
+talk_kind: invited|contributed
+```
+
+This is used by the CV rendering to split/filter talks.
+
+### Service schema
+
+`data/cv/service.yaml` uses normalized roles:
+
+- `conference_review`
+- `subreview`
+- `journal_review`
+
+Extension is possible via:
+
+```yaml
+role: custom
+role_custom: "Program Committee"
+```
+
+Recommended fields per entry:
+
+- `venue`
+- `year` (string, supports values like `2024/2025`)
+- `note` (optional)
+
+### Research interests
+
+Both fields are always maintained in `data/cv/public.yaml`:
+
+- `research_interests_text`
+- `research_interests_bullets`
+
+Selection is controlled by the TeX flag `\ifresearchfull`.

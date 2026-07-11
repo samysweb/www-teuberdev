@@ -2,6 +2,7 @@
 title:  Provably Safe Neural Network Controllers via Differential Dynamic Logic
 summary: Laboratory for Foundations of Computer Science Seminar (Edinburgh, UK)
 date: 2024-10-29
+talk_kind: invited
 publishDate: 2024-01-01
 authors:
   - admin

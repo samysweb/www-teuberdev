@@ -1,7 +1,8 @@
 ---
 title:  Heterogeneous Dynamic Logic
-summary: KeY Symposium 2024 (Bad Herrenalb, Germany)
+summary: KeY Symposium (Bad Herrenalb, Germany)
 date: 2024-08-01
+talk_kind: contributed
 authors:
   - admin
 links:

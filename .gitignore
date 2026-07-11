@@ -8,3 +8,6 @@ public/
 .hugo_build.lock
 
 assets/jsconfig.json
+
+# Local CV private data (do not commit)
+data/cv/private.yaml

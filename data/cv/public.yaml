@@ -1,0 +1,19 @@
+name: "Samuel Teuber"
+email: "teuber@kit.edu"
+website: "www.teuber.dev"
+languages:
+  - "German (native)"
+  - "English (fluent)"
+  - "French (basic)"
+office_address: "Am Fasanengarten 5, 76131 Karlsruhe, Germany"
+references_text: "Available upon request"
+
+research_interests_text: "My research develops logical foundations and practical tools for the verification of AI-based heterogeneous systems, that is, systems combining software, AI, and physical components. Concrete applications include the formal verification of neural network control systems and the verification of algorithmic fairness."
+research_interests_bullets:
+  - "Formal verification of neural network control systems"
+  - "Algorithmic fairness and information-flow perspectives"
+  - "Deductive verification with theorem provers"
+
+optional_metadata:
+  website_label: "Website"
+  cv_last_updated: ""
