@@ -1,6 +1,9 @@
 entries:
   - role: conference_review
     venue: "NeurIPS"
+    year: "2026"
+  - role: conference_review
+    venue: "NeurIPS"
     year: "2025"
   - role: conference_review
     venue: "AAAI"

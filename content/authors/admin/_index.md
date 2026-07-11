@@ -30,6 +30,7 @@ education:
     year: 2022-present
     thesis: "Provable Correctness of AI-based Heterogeneous Systems"
     advisor: "Prof. Bernhard Beckert (KIT)"
+    note: "Completion planned by Feb. 2027"
   - area: Master's Thesis via interACT
     institution: Logical Systems Lab, Carnegie Mellon University
     year: 2022

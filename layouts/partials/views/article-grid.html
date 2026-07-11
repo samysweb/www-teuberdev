@@ -1,6 +1,8 @@
 {{ $item := .item }}
 {{ $fill_image := .config.fill_image | default true }}
 
+{{ if $item.Params.web_exclude }}{{ return }}{{ end }}
+
 {{ $resource := partial "functions/get_featured_image.html" $item }}
 {{ $anchor := $item.Params.image.focal_point | default "Center" }}
 

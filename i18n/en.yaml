@@ -204,6 +204,9 @@
 - id: pub_workshop
   translation: Workshop Paper
 
+- id: pub_software
+  translation: Software
+
 # Project details
 
 - id: open_project_site
