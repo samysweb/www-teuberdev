@@ -1,0 +1,59 @@
+{{ define "main" }}
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+<div class="max-w-prose mx-auto flex justify-center">
+  <article class="prose prose-slate lg:prose-xl dark:prose-invert">
+    <h1 class="lg:text-6xl">{{ .Title }}</h1>
+    {{ .Content }}
+  </article>
+</div>
+
+{{/* Collect one entry per city/region (each is a subsection with its own _index.md) */}}
+{{ $cities := slice }}
+{{ range .Sections }}
+  {{ if and .Params.latitude .Params.longitude }}
+    {{ $cities = $cities | append (dict
+      "name" .Title
+      "lat" .Params.latitude
+      "lng" .Params.longitude
+      "url" .RelPermalink
+      "summary" (.Params.summary | default "")
+    ) }}
+  {{ end }}
+{{ end }}
+
+<div id="travel-overview-map" style="height: 480px;" class="rounded-lg my-8 max-w-4xl mx-auto"></div>
+
+<div class="max-w-4xl mx-auto grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-12">
+  {{ range .Sections }}
+    <a href="{{ .RelPermalink }}" class="block rounded-lg border p-4 hover:shadow-md transition-shadow no-underline">
+      <h3 class="font-semibold text-lg mb-1">{{ .Title }}</h3>
+      {{ with .Params.summary }}<p class="text-sm opacity-80">{{ . }}</p>{{ end }}
+    </a>
+  {{ end }}
+</div>
+
+<script>
+(function () {
+  var cities = {{ $cities | jsonify }};
+  var map = L.map('travel-overview-map').setView([48.5, 9.5], 5);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 18
+  }).addTo(map);
+
+  var bounds = [];
+  cities.forEach(function (c) {
+    var marker = L.marker([c.lat, c.lng]).addTo(map);
+    marker.bindPopup('<a href="' + c.url + '"><strong>' + c.name + '</strong></a>' + (c.summary ? '<br>' + c.summary : ''));
+    bounds.push([c.lat, c.lng]);
+  });
+  if (bounds.length > 0) {
+    map.fitBounds(bounds, { padding: [30, 30], maxZoom: 10 });
+  }
+})();
+</script>
+
+{{ end }}

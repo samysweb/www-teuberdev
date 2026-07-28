@@ -11,3 +11,6 @@ main:
   - name: Blog
     url: /blog/
     weight: 26
+  - name: Travel
+    url: /travel/
+    weight: 27

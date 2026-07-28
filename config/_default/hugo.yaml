@@ -23,6 +23,7 @@ permalinks:
   tags: /tag/:slug/
   categories: /category/:slug/
   publication_types: /publication-type/:slug/
+  travel_tags: /travel-tag/:slug/
 outputs:
   home:
     - HTML
@@ -64,6 +65,7 @@ taxonomies:
   category: categories
   publication_type: publication_types
   author: authors
+  travel_tag: travel_tags
 related:
   threshold: 80
   includeNewer: true
