@@ -2,8 +2,9 @@
 title: Pizzéria NO.900 - Peel, Montréal
 latitude: 45.501396
 longitude: -73.5754011
-travel_tags: []
-summary: ""
+travel_tags:
+  - Food
+summary: "Nice (neapolitan) Pizzeria"
 ---
 
 <!-- Koordinaten per nominatim-Suche geraten, bitte pruefen! -->
