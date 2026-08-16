@@ -3,7 +3,5 @@ title: Karlsruhe
 layout: city
 latitude: 49.0069
 longitude: 8.4037
-summary: Meine Heimatstadt während der Promotion am KIT.
+summary: The city I've been living in since 2015.
 ---
-
-Karlsruhe ist bekannt für seine Fächerstadt-Struktur rund um das Schloss.

@@ -11,12 +11,16 @@
   </article>
 </div>
 
-{{/* Collect every spot (regular page) below this city */}}
+{{/* Collect every spot (regular page) below this city, with its tags */}}
 {{ $spots := slice }}
+{{ $allTags := slice }}
 {{ range .RegularPages }}
   {{ if and .Params.latitude .Params.longitude }}
     {{ $tags := slice }}
-    {{ range .GetTerms "travel_tags" }}{{ $tags = $tags | append .LinkTitle }}{{ end }}
+    {{ range .GetTerms "travel_tags" }}
+      {{ $tags = $tags | append .LinkTitle }}
+      {{ $allTags = $allTags | append .LinkTitle }}
+    {{ end }}
     {{ $spots = $spots | append (dict
       "name" .Title
       "lat" .Params.latitude
@@ -27,16 +31,28 @@
     ) }}
   {{ end }}
 {{ end }}
+{{ $allTags = $allTags | uniq | sort }}
 
-<div id="city-map" style="height: 450px;" class="rounded-lg my-8 max-w-4xl mx-auto"></div>
+{{ if $allTags }}
+<div class="max-w-4xl mx-auto flex flex-wrap gap-2 mt-6 mb-4" id="tag-filters">
+  <button type="button" class="tag-filter-btn is-active" data-tag="">Alle</button>
+  {{ range $allTags }}
+  <button type="button" class="tag-filter-btn" data-tag="{{ . }}">{{ . }}</button>
+  {{ end }}
+</div>
+{{ end }}
 
-<div class="max-w-4xl mx-auto grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-12">
+<div id="city-map" style="height: 450px;" class="rounded-lg mb-8 max-w-4xl mx-auto"></div>
+
+<div class="max-w-4xl mx-auto grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-12" id="spot-grid">
   {{ range .RegularPages }}
-    <a href="{{ .RelPermalink }}" class="block rounded-lg border p-4 hover:shadow-md transition-shadow no-underline">
+    {{ $tags := .GetTerms "travel_tags" }}
+    {{ $tagNames := slice }}{{ range $tags }}{{ $tagNames = $tagNames | append .LinkTitle }}{{ end }}
+    <a href="{{ .RelPermalink }}" class="spot-card block rounded-lg border p-4 hover:shadow-md transition-shadow no-underline" data-tags="{{ delimit $tagNames "|" }}">
       <h3 class="font-semibold text-lg mb-1">{{ .Title }}</h3>
       {{ with .Params.summary }}<p class="text-sm opacity-80 mb-2">{{ . }}</p>{{ end }}
       <div class="flex flex-wrap gap-1">
-        {{ range .GetTerms "travel_tags" }}
+        {{ range $tags }}
           <span class="badge badge-light text-xs">{{ .LinkTitle }}</span>
         {{ end }}
       </div>
@@ -44,20 +60,63 @@
   {{ end }}
 </div>
 
+<style>
+  .tag-filter-btn {
+    padding: 0.25rem 0.9rem;
+    border-radius: 9999px;
+    border: 1px solid currentColor;
+    opacity: 0.55;
+    background: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+  .tag-filter-btn.is-active {
+    opacity: 1;
+    font-weight: 600;
+  }
+</style>
+
 <script>
 (function () {
-  var spots = {{ $spots | jsonify }};
-  var map = L.map('city-map').setView([{{ .Params.latitude }}, {{ .Params.longitude }}], 13);
+  var spots = {{ $spots | jsonify | safeJS }};
+  var map = L.map('city-map').setView([{{ .Params.latitude }}, {{ .Params.longitude }}], {{ .Params.zoom | default 13 }});
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     maxZoom: 19
   }).addTo(map);
 
-  spots.forEach(function (s) {
+  var markers = spots.map(function (s) {
     var popup = '<a href="' + s.url + '"><strong>' + s.name + '</strong></a>';
     if (s.tags && s.tags.length) { popup += '<br><em>' + s.tags.join(', ') + '</em>'; }
     if (s.summary) { popup += '<br>' + s.summary; }
-    L.marker([s.lat, s.lng]).addTo(map).bindPopup(popup);
+    var marker = L.marker([s.lat, s.lng]).bindPopup(popup);
+    marker.addTo(map);
+    marker._tags = s.tags || [];
+    return marker;
+  });
+
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#spot-grid .spot-card'));
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('#tag-filters .tag-filter-btn'));
+
+  function applyFilter(tag) {
+    markers.forEach(function (m) {
+      var show = !tag || m._tags.indexOf(tag) !== -1;
+      var onMap = map.hasLayer(m);
+      if (show && !onMap) { m.addTo(map); }
+      if (!show && onMap) { map.removeLayer(m); }
+    });
+    cards.forEach(function (c) {
+      var tags = (c.getAttribute('data-tags') || '').split('|');
+      var show = !tag || tags.indexOf(tag) !== -1;
+      c.style.display = show ? '' : 'none';
+    });
+    buttons.forEach(function (b) {
+      b.classList.toggle('is-active', b.getAttribute('data-tag') === tag);
+    });
+  }
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { applyFilter(b.getAttribute('data-tag')); });
   });
 })();
 </script>

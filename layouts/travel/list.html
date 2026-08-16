@@ -37,7 +37,7 @@
 
 <script>
 (function () {
-  var cities = {{ $cities | jsonify }};
+  var cities = {{ $cities | jsonify | safeJS }};
   var map = L.map('travel-overview-map').setView([48.5, 9.5], 5);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',

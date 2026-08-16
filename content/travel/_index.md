@@ -1,6 +1,6 @@
 ---
-title: Travel Guide
+title: Travel Guides
 summary: Empfehlungen zu Städten und Regionen, die ich besucht habe.
 ---
 
-Eine Sammlung von Orten, Bars, Restaurants und Sehenswürdigkeiten, die ich empfehlen kann.
+A collection of places I enjoyed visiting in cities around the world.
