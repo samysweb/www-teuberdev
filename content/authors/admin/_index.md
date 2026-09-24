@@ -236,6 +236,10 @@ I am a PhD Candidate at Karlsruhe Institute of Technology (KIT) in Germany advis
 My research develops logical foundations and practical tools for the verification of *AI-based heterogeneous systems*, that is, systems combining software, AI, and physical components.
 Concrete applications include the formal verification of neural network control systems and the verification of algorithmic fairness.
 
+<p class="my-highlight" aria-hidden="true">
+  My recent paper "Provably Fair AI-based Beehive Queue Management" (with I.N. Jection, 2026) received the Best Paper Award at the Workshop on Apicultural Cyber-Physical Systems.
+</p>
+
 I previously obtained a M.Sc. degree in Computer Science from KIT and completed my Master's Thesis in the [Logical Systems Lab](https://www.ls.cs.cmu.edu/) at Carnegie Mellon University under the supervision of [André Platzer](https://lfcps.org/andre.html).
 During my bachelor studies I spent a year abroad at ENSIMAG (Grenoble, France) and
 participated in the [CERN Openlab Summer Student Program](https://openlab.cern/education/cern-openlab-summer-student-programme) (Geneva, Switzerland).
