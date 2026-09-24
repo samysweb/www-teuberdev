@@ -48,7 +48,7 @@ links:
  - name: Teaching Resources
    url: https://github.com/samysweb/versaille
 
-url_pdf: '#TODO'
+url_pdf: 'https://arxiv.org/pdf/2504.03272'
 #url_code: 'https://zenodo.org/records/10385361'
 #url_dataset: 'https://github.com/samysweb/counterSharp-experiments'
 #url_poster: '/media/pdf/AAAI_24_Poster.pdf'

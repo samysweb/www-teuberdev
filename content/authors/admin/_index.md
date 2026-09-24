@@ -74,7 +74,10 @@ work:
   - position: Researcher
     company_name: KASTEL Beckert, KIT
     company_url: 'https://formal.kastel.kit.edu'
+    location: Karlsruhe
     date_start: '2022-09-15'
+    summary: |2-
+      I was involved in various research efforts (see [publications](https://teuber.dev/work/)) and also participated in teaching and supervision activites of the group (see [teaching](https://teuber.dev/teaching/)).
 
   # - title: Master's Thesis
   #   company: Logical Systems Lab, Carnegie Mellon University
@@ -187,7 +190,7 @@ profiles:
   link: https://scholar.google.com/citations?user=0dq6DCQAAAAJ&hl=en
 
 awards:
-- date: "2016-09-30"
+- date: "2015-09-30"
   awarder: DPG
   organization_url: https://www.dpg-physik.de/auszeichnungen/dpg-preise/abiturpreis
   title: "Abitur prize of the German Physics Association (DPG)"
@@ -211,6 +214,9 @@ awards:
   title: Best Master's Thesis Award 2022/2023 by the KIT Informatics Department
   #description: "My thesis concerned with the transfer of safety guarantees for Cyber-Physical Systems from differential dynamic logic to neural network controllers."
   url: https://www.informatik.kit.edu/7054_13223.php#gallery-12
+- date: "2026-02-16"
+  awarder: Department of Informatics, KIT
+  title: Department prize for best "Stammmodul" 2024/25
 
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/media/resume.pdf`, enable `ai` icons in `params.toml`, 

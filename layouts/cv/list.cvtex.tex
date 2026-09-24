@@ -354,7 +354,7 @@
 \CVSection{Teaching Experience}
 \begin{itemize}[leftmargin=*]
 {{- range sort (where site.RegularPages "File.Dir" "in" (slice "teaching/courses/")) "Date" "desc" }}
-\item \textbf{ {{ partial "cv/tex_escape.html" (.Params.semester_label | default (.Date.Format "2006")) }} }: {{ partial "cv/tex_escape.html" .Title }}{{ with .Params.role }} ({{ partial "cv/tex_escape.html" . }}){{ end }}
+\item \textbf{ {{ partial "cv/tex_escape.html" (.Params.semester_label | default (.Date.Format "2006")) }} }: {{ partial "cv/tex_escape.html" .Title }}{{ with .Params.role }} ({{ partial "cv/tex_escape.html" . }}){{ end }}{{ with .Params.note }} --- \textbf{ {{ partial "cv/tex_escape.html" . }} }{{ end }}
 {{- end }}
 \end{itemize}
 

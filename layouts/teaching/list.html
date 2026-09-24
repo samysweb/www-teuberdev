@@ -24,6 +24,7 @@
           <td style="text-align:center; white-space:nowrap">{{ .Params.semester_label }}</td>
           <td>
             {{ if .Params.course_url }}<a href="{{ .Params.course_url }}">{{ .Title }}</a>{{ else }}{{ .Title }}{{ end }}
+            {{ with .Params.note }}<br><strong>{{ . }}</strong>{{ end }}
           </td>
           <td style="text-align:center">{{ .Params.role }}</td>
           <td style="text-align:center">
@@ -43,17 +44,17 @@
     <table>
       <thead>
         <tr>
-          <th style="text-align:center">Semester</th>
-          <th style="text-align:center">Topic</th>
-          <th style="text-align:center">Type</th>
+          <th style="text-align:left">Semester</th>
+          <th style="text-align:left">Topic</th>
+          <th style="text-align:left">Type</th>
         </tr>
       </thead>
       <tbody>
         {{ range $projectsSection.Pages.ByDate.Reverse }}
         <tr>
-          <td style="text-align:center; white-space:nowrap">{{ .Params.semester_label }}</td>
-          <td style="text-align:center">{{ .Title }}</td>
-          <td style="text-align:center; white-space:nowrap">{{ .Params.project_type }}</td>
+          <td style="text-align:left; white-space:nowrap">{{ .Params.semester_label }}</td>
+          <td style="text-align:left">{{ .Title }}</td>
+          <td style="text-align:left; white-space:nowrap">{{ .Params.project_type }}</td>
         </tr>
         {{ end }}
       </tbody>
