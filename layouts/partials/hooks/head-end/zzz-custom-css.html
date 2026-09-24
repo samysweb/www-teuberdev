@@ -1,1 +1,8 @@
 <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+<script>
+  window.addEventListener('load', () => {
+    window.setTimeout(function(){
+        document.querySelectorAll('.my-highlight').forEach(e => e.setAttribute('aria-hidden', 'true'));
+    }, 1000);
+  });
+</script>

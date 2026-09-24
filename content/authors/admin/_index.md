@@ -236,7 +236,7 @@ I am a PhD Candidate at Karlsruhe Institute of Technology (KIT) in Germany advis
 My research develops logical foundations and practical tools for the verification of *AI-based heterogeneous systems*, that is, systems combining software, AI, and physical components.
 Concrete applications include the formal verification of neural network control systems and the verification of algorithmic fairness.
 
-<p class="my-highlight" aria-hidden="true">
+<p class="my-highlight">
   My recent paper "Provably Fair AI-based Beehive Queue Management" (with I.N. Jection, 2026) received the Best Paper Award at the Workshop on Apicultural Cyber-Physical Systems.
 </p>
 
