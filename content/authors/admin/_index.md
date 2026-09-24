@@ -238,6 +238,7 @@ Concrete applications include the formal verification of neural network control 
 
 <p class="my-highlight">
   My recent paper "Provably Fair AI-based Beehive Queue Management" (with I.N. Jection, 2026) received the Best Paper Award at the Workshop on Apicultural Cyber-Physical Systems.
+  Please email me if you want to collaborate on this research direction.
 </p>
 
 I previously obtained a M.Sc. degree in Computer Science from KIT and completed my Master's Thesis in the [Logical Systems Lab](https://www.ls.cs.cmu.edu/) at Carnegie Mellon University under the supervision of [André Platzer](https://lfcps.org/andre.html).
