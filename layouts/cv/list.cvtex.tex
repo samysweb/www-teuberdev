@@ -6,7 +6,7 @@
 \researchfulltrue
 \talksinvitedonlytrue
 \showstudentsupervisiontrue
-\showprivatefieldstrue
+\showprivatefieldsfalse
 
 {{- $public := site.Data.cv.public -}}
 {{- $private := site.Data.cv.private -}}
@@ -369,7 +369,7 @@
 
 {{ partial "cv/section_service.tex" . }}
 
-\CVSection{References}
-{{ partial "cv/tex_escape.html" ($public.references_text | default "Available upon request") }}
+% \CVSection{References}
+% {{ partial "cv/tex_escape.html" ($public.references_text | default "Available upon request") }}
 
 \end{document}
